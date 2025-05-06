@@ -63,7 +63,7 @@ const Header: React.FC = () => {
             {user ? (
               <div className="flex items-center gap-4">
                 <span className="text-wedding-mauve flex items-center gap-1">
-                  <User className="h-4 w-4" /> {user.user_metadata.full_name || 'Guest'}
+                  <User className="h-4 w-4" /> {user.user_metadata.full_name || user.user_metadata.name || 'Guest'}
                 </span>
                 <Button 
                   variant="outline" 
@@ -100,7 +100,7 @@ const Header: React.FC = () => {
             {user ? (
               <div className="flex flex-col gap-3 pt-2 border-t border-gray-200">
                 <span className="text-wedding-mauve flex items-center gap-1">
-                  <User className="h-4 w-4" /> {user.user_metadata.full_name || 'Guest'}
+                  <User className="h-4 w-4" /> {user.user_metadata.full_name || user.user_metadata.name || 'Guest'}
                 </span>
                 <Button 
                   variant="outline" 

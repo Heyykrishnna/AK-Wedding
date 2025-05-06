@@ -8,8 +8,7 @@ interface AuthContextType {
   user: User | null;
   session: Session | null;
   isLoading: boolean;
-  signIn: (email: string, password: string) => Promise<void>;
-  signUp: (email: string, password: string, fullName: string) => Promise<void>;
+  signInWithGoogle: () => Promise<void>;
   signOut: () => Promise<void>;
 }
 
@@ -66,7 +65,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     });
   };
 
-  const signIn = async (email: string, password: string) => {
+  const signInWithGoogle = async () => {
     try {
       setIsLoading(true);
       // Clean up existing auth state
@@ -79,46 +78,18 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         // Continue even if this fails
       }
       
-      const { error } = await supabase.auth.signInWithPassword({ email, password });
-      if (error) throw error;
-    } catch (error: any) {
-      toast({
-        title: "Sign in failed",
-        description: error.message || "Please check your credentials and try again.",
-        variant: "destructive",
-      });
-      throw error;
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const signUp = async (email: string, password: string, fullName: string) => {
-    try {
-      setIsLoading(true);
-      // Clean up existing auth state
-      cleanupAuthState();
-      
-      const { error } = await supabase.auth.signUp({
-        email,
-        password,
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
         options: {
-          data: {
-            full_name: fullName
-          }
+          redirectTo: `${window.location.origin}/auth`
         }
       });
       
       if (error) throw error;
-      
-      toast({
-        title: "Account created",
-        description: "Please check your email to verify your account.",
-      });
     } catch (error: any) {
       toast({
-        title: "Sign up failed",
-        description: error.message || "An error occurred during signup.",
+        title: "Sign in failed",
+        description: error.message || "An error occurred during sign in.",
         variant: "destructive",
       });
       throw error;
@@ -146,7 +117,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, session, isLoading, signIn, signUp, signOut }}>
+    <AuthContext.Provider value={{ user, session, isLoading, signInWithGoogle, signOut }}>
       {children}
     </AuthContext.Provider>
   );
