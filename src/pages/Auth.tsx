@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
@@ -69,8 +68,6 @@ const Auth = () => {
     setIsPending(true);
     try {
       await signUp(values.email, values.password, values.fullName);
-      // Switch to login after successful signup
-      setIsLogin(true);
     } finally {
       setIsPending(false);
     }

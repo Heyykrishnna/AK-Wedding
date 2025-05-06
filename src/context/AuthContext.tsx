@@ -99,8 +99,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       // Clean up existing auth state
       cleanupAuthState();
       
-      const { error } = await supabase.auth.signUp({ 
-        email, 
+      const { error } = await supabase.auth.signUp({
+        email,
         password,
         options: {
           data: {
