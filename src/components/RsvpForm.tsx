@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -40,7 +40,7 @@ const RsvpForm = () => {
   });
 
   // Load existing RSVP data if user is authenticated
-  useState(() => {
+  useEffect(() => {
     const loadUserRsvp = async () => {
       if (!user) {
         setIsLoading(false);
