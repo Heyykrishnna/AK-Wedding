@@ -2,7 +2,7 @@
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
 import { Button } from '@/components/ui/button';
-import { Google } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const Auth = () => {
   const { user, isLoading, signInWithGoogle } = useAuth();
@@ -32,7 +32,7 @@ const Auth = () => {
               className="w-full flex items-center justify-center gap-2"
               variant="outline"
             >
-              <Google className="h-4 w-4" />
+              <Mail className="h-4 w-4" />
               {isLoading ? "Signing in..." : "Continue with Google"}
             </Button>
           </div>
