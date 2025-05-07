@@ -45,8 +45,7 @@ const RsvpForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Generate a UUID for the id field (Note: Supabase actually uses UUIDs not strings)
-      // Save RSVP data to Supabase
+      // For anonymous submissions without RLS restrictions, use the anonymous key that's already in the Supabase client
       const { error } = await supabase
         .from('profiles')
         .insert({
@@ -55,9 +54,11 @@ const RsvpForm = () => {
           dietary_restrictions: formData.dietary,
           guests: formData.guests,
           attending: attending,
+          // Note: email isn't stored in the profiles table based on the schema
         });
       
       if (error) {
+        console.error("Error details:", error);
         throw error;
       }
       
