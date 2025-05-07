@@ -45,16 +45,16 @@ const RsvpForm = () => {
     setIsSubmitting(true);
 
     try {
-      // For anonymous submissions without RLS restrictions, use the anonymous key that's already in the Supabase client
+      // Create a new record in the public.rsvp_responses table which doesn't have RLS restrictions
+      // and doesn't require an ID that references the users table
       const { error } = await supabase
-        .from('profiles')
+        .from('rsvp_responses')
         .insert({
-          id: crypto.randomUUID(), // Generate a UUID for the required id field
-          full_name: formData.name,
+          name: formData.name,
+          email: formData.email,
           dietary_restrictions: formData.dietary,
           guests: formData.guests,
           attending: attending,
-          // Note: email isn't stored in the profiles table based on the schema
         });
       
       if (error) {
