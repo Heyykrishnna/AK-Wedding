@@ -45,17 +45,17 @@ const RsvpForm = () => {
     setIsSubmitting(true);
 
     try {
+      // Generate a UUID for the id field (Note: Supabase actually uses UUIDs not strings)
       // Save RSVP data to Supabase
       const { error } = await supabase
         .from('profiles')
-        .insert([
-          { 
-            full_name: formData.name,
-            dietary_restrictions: formData.dietary,
-            guests: formData.guests,
-            attending: attending,
-          }
-        ]);
+        .insert({
+          id: crypto.randomUUID(), // Generate a UUID for the required id field
+          full_name: formData.name,
+          dietary_restrictions: formData.dietary,
+          guests: formData.guests,
+          attending: attending,
+        });
       
       if (error) {
         throw error;
