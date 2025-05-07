@@ -39,6 +39,36 @@ export type Database = {
         }
         Relationships: []
       }
+      rsvp_responses: {
+        Row: {
+          attending: boolean
+          created_at: string | null
+          dietary_restrictions: string | null
+          email: string
+          guests: number | null
+          id: string
+          name: string
+        }
+        Insert: {
+          attending: boolean
+          created_at?: string | null
+          dietary_restrictions?: string | null
+          email: string
+          guests?: number | null
+          id?: string
+          name: string
+        }
+        Update: {
+          attending?: boolean
+          created_at?: string | null
+          dietary_restrictions?: string | null
+          email?: string
+          guests?: number | null
+          id?: string
+          name?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
