@@ -2,14 +2,10 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { useAuth } from '@/context/AuthContext';
-import { Button } from './ui/button';
-import { User } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { user, signOut } = useAuth();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -59,32 +55,6 @@ const Header: React.FC = () => {
             <a href="#details" className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">Details</a>
             <a href="#rsvp" className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">RSVP</a>
             <a href="#gallery" className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">Gallery</a>
-            
-            {user ? (
-              <div className="flex items-center gap-4">
-                <span className="text-wedding-mauve flex items-center gap-1">
-                  <User className="h-4 w-4" /> {user.user_metadata.full_name || user.user_metadata.name || 'Guest'}
-                </span>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="border-wedding-mauve text-wedding-mauve hover:bg-wedding-mauve/10"
-                  onClick={() => signOut()}
-                >
-                  Sign Out
-                </Button>
-              </div>
-            ) : (
-              <Link to="/auth">
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="border-wedding-mauve text-wedding-mauve hover:bg-wedding-mauve/10"
-                >
-                  Sign In
-                </Button>
-              </Link>
-            )}
           </nav>
         </div>
 
@@ -96,39 +66,6 @@ const Header: React.FC = () => {
             <a href="#details" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">Details</a>
             <a href="#rsvp" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">RSVP</a>
             <a href="#gallery" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">Gallery</a>
-            
-            {user ? (
-              <div className="flex flex-col gap-3 pt-2 border-t border-gray-200">
-                <span className="text-wedding-mauve flex items-center gap-1">
-                  <User className="h-4 w-4" /> {user.user_metadata.full_name || user.user_metadata.name || 'Guest'}
-                </span>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="border-wedding-mauve text-wedding-mauve hover:bg-wedding-mauve/10"
-                  onClick={() => {
-                    signOut();
-                    setMenuOpen(false);
-                  }}
-                >
-                  Sign Out
-                </Button>
-              </div>
-            ) : (
-              <Link 
-                to="/auth" 
-                onClick={() => setMenuOpen(false)}
-                className="block pt-2 border-t border-gray-200"
-              >
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="w-full border-wedding-mauve text-wedding-mauve hover:bg-wedding-mauve/10"
-                >
-                  Sign In
-                </Button>
-              </Link>
-            )}
           </div>
         </nav>
       </div>

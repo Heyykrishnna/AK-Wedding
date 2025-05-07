@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -14,90 +14,39 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import { useAuth } from '@/context/AuthContext';
-import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
-import { Link } from 'react-router-dom';
 
 const formSchema = z.object({
+  name: z.string().min(1, "Please enter your name"),
+  email: z.string().email("Please enter a valid email"),
   guests: z.coerce.number().min(0).max(10),
   dietary: z.string().optional(),
 });
 
+type FormValues = z.infer<typeof formSchema>;
+
 const RsvpForm = () => {
-  const { user } = useAuth();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [userResponse, setUserResponse] = useState<'attending' | 'not-attending' | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
   
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      name: '',
+      email: '',
       guests: 0,
       dietary: '',
     },
   });
 
-  // Load existing RSVP data if user is authenticated
-  useEffect(() => {
-    const loadUserRsvp = async () => {
-      if (!user) {
-        setIsLoading(false);
-        return;
-      }
-
-      try {
-        const { data, error } = await supabase
-          .from('profiles')
-          .select('attending, guests, dietary_restrictions')
-          .eq('id', user.id)
-          .single();
-
-        if (error) throw error;
-
-        if (data) {
-          if (data.attending !== null) {
-            setUserResponse(data.attending ? 'attending' : 'not-attending');
-          }
-          form.setValue('guests', data.guests || 0);
-          form.setValue('dietary', data.dietary_restrictions || '');
-        }
-      } catch (error) {
-        console.error('Error loading RSVP data:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadUserRsvp();
-  }, [user, form]);
-
-  const handleSubmitRsvp = async (formData: z.infer<typeof formSchema>, attending: boolean) => {
-    if (!user) {
-      toast({
-        title: "Authentication required",
-        description: "Please sign in to submit your RSVP.",
-        variant: "destructive",
-      });
-      return;
-    }
-
+  const handleSubmitRsvp = async (formData: FormValues, attending: boolean) => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase
-        .from('profiles')
-        .update({
-          attending: attending,
-          guests: formData.guests,
-          dietary_restrictions: formData.dietary,
-          updated_at: new Date().toISOString(),
-        })
-        .eq('id', user.id);
-
-      if (error) throw error;
-
+      // Simulate form submission (no actual auth/database connection)
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
       setUserResponse(attending ? 'attending' : 'not-attending');
       
       toast({
@@ -107,37 +56,13 @@ const RsvpForm = () => {
     } catch (error: any) {
       toast({
         title: "Error submitting RSVP",
-        description: error.message || "Please try again later.",
+        description: "Please try again later.",
         variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
     }
   };
-
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center py-12">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-wedding-mauve"></div>
-      </div>
-    );
-  }
-
-  if (!user) {
-    return (
-      <div className="text-center py-8 max-w-md mx-auto">
-        <h3 className="text-xl font-medium mb-4">Please sign in to RSVP</h3>
-        <p className="mb-6 text-gray-600">
-          You need to create an account or sign in to submit your RSVP for our wedding.
-        </p>
-        <Link to="/auth">
-          <Button className="bg-wedding-mauve hover:bg-wedding-mauve/80">
-            Sign in to RSVP
-          </Button>
-        </Link>
-      </div>
-    );
-  }
 
   if (userResponse) {
     return (
@@ -173,27 +98,34 @@ const RsvpForm = () => {
             <h3 className="text-xl font-medium">Will you be attending?</h3>
             <p className="text-sm text-gray-500 mt-2">Please let us know by December 1st, 2025</p>
           </div>
-
-          <div className="flex gap-4 justify-center mb-6">
-            <Button
-              type="button"
-              className="bg-wedding-mauve hover:bg-wedding-mauve/80"
-              onClick={() => form.handleSubmit((data) => handleSubmitRsvp(data, true))()}
-              disabled={isSubmitting}
-            >
-              Yes, I'll be there
-            </Button>
-            
-            <Button
-              type="button"
-              variant="outline"
-              className="border-wedding-mauve text-wedding-mauve hover:bg-wedding-mauve/10"
-              onClick={() => form.handleSubmit((data) => handleSubmitRsvp(data, false))()}
-              disabled={isSubmitting}
-            >
-              Sorry, I can't make it
-            </Button>
-          </div>
+          
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Your Name</FormLabel>
+                <FormControl>
+                  <Input placeholder="John Smith" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input type="email" placeholder="email@example.com" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
           <FormField
             control={form.control}
@@ -225,6 +157,27 @@ const RsvpForm = () => {
               </FormItem>
             )}
           />
+          
+          <div className="flex gap-4 justify-center mt-8">
+            <Button
+              type="button"
+              className="bg-wedding-mauve hover:bg-wedding-mauve/80"
+              onClick={() => form.handleSubmit((data) => handleSubmitRsvp(data, true))()}
+              disabled={isSubmitting}
+            >
+              Yes, I'll be there
+            </Button>
+            
+            <Button
+              type="button"
+              variant="outline"
+              className="border-wedding-mauve text-wedding-mauve hover:bg-wedding-mauve/10"
+              onClick={() => form.handleSubmit((data) => handleSubmitRsvp(data, false))()}
+              disabled={isSubmitting}
+            >
+              Sorry, I can't make it
+            </Button>
+          </div>
         </form>
       </Form>
     </div>
