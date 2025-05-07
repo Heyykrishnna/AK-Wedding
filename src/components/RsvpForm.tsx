@@ -15,6 +15,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const formSchema = z.object({
   name: z.string().min(1, "Please enter your name"),
@@ -44,8 +45,21 @@ const RsvpForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate form submission (no actual auth/database connection)
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Save RSVP data to Supabase
+      const { error } = await supabase
+        .from('profiles')
+        .insert([
+          { 
+            full_name: formData.name,
+            dietary_restrictions: formData.dietary,
+            guests: formData.guests,
+            attending: attending,
+          }
+        ]);
+      
+      if (error) {
+        throw error;
+      }
       
       setUserResponse(attending ? 'attending' : 'not-attending');
       
@@ -54,6 +68,7 @@ const RsvpForm = () => {
         description: `Thank you for your response! We ${attending ? 'look forward to seeing you' : 'will miss you'}.`,
       });
     } catch (error: any) {
+      console.error("Error submitting RSVP:", error);
       toast({
         title: "Error submitting RSVP",
         description: "Please try again later.",

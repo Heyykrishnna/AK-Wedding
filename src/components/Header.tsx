@@ -35,7 +35,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-cormorant font-semibold text-wedding-mauve">
-            K&J
+            A&K
           </Link>
 
           {/* Mobile menu button */}

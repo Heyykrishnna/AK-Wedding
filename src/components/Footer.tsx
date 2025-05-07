@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
     <footer className="py-12 bg-wedding-mauve text-white">
       <div className="container mx-auto px-4">
         <div className="text-center">
-          <h2 className="font-cormorant text-3xl md:text-4xl mb-4">Kate & James</h2>
+          <h2 className="font-cormorant text-3xl md:text-4xl mb-4">Akansha & Kush</h2>
           <div className="flex justify-center items-center mb-6">
             <div className="w-8 h-px bg-white/70 mr-4"></div>
             <Heart className="w-5 h-5" />
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
           </div>
           
           <p className="text-sm text-white/70">
-            &copy; {currentYear} Kate & James Wedding. All rights reserved.
+            &copy; {currentYear} Akansha & Kush Wedding. All rights reserved.
           </p>
         </div>
       </div>
