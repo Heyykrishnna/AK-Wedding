@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -15,16 +14,8 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-
-const formSchema = z.object({
-  name: z.string().min(1, "Please enter your name"),
-  email: z.string().email("Please enter a valid email"),
-  guests: z.coerce.number().min(0).max(10),
-  dietary: z.string().optional(),
-});
-
-type FormValues = z.infer<typeof formSchema>;
+import { formSchema, FormValues, submitRsvp } from '@/utils/rsvp-utils';
+import RsvpConfirmation from './RsvpConfirmation';
 
 const RsvpForm = () => {
   const { toast } = useToast();
@@ -45,24 +36,7 @@ const RsvpForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Format dietary restrictions field to handle empty string properly
-      const dietaryValue = formData.dietary?.trim() || null;
-      
-      // Create a new record in the rsvp_responses table
-      const { error } = await supabase
-        .from('rsvp_responses')
-        .insert({
-          name: formData.name,
-          email: formData.email,
-          dietary_restrictions: dietaryValue, // Use correct column name
-          guests: formData.guests,
-          attending: attending,
-        });
-      
-      if (error) {
-        console.error("Error details:", error);
-        throw error;
-      }
+      await submitRsvp(formData, attending);
       
       setUserResponse(attending ? 'attending' : 'not-attending');
       
@@ -83,29 +57,11 @@ const RsvpForm = () => {
   };
 
   if (userResponse) {
-    return (
-      <div className="text-center py-8 max-w-md mx-auto">
-        <h3 className="text-xl font-medium mb-4">
-          {userResponse === 'attending' 
-            ? 'You have confirmed your attendance!' 
-            : 'Thank you for letting us know you cannot attend.'}
-        </h3>
-        <p className="mb-6 text-gray-600">
-          {userResponse === 'attending'
-            ? `We're looking forward to celebrating with you${form.getValues().guests > 0 
-                ? ` and your ${form.getValues().guests} guest${form.getValues().guests === 1 ? '' : 's'}` 
-                : ''}.`
-            : "We'll miss having you with us on our special day."}
-        </p>
-        <Button 
-          variant="outline" 
-          className="border-wedding-mauve text-wedding-mauve hover:bg-wedding-mauve/10"
-          onClick={() => setUserResponse(null)}
-        >
-          Update my RSVP
-        </Button>
-      </div>
-    );
+    return <RsvpConfirmation 
+      userResponse={userResponse} 
+      formValues={form.getValues()} 
+      onReset={() => setUserResponse(null)} 
+    />;
   }
 
   return (
