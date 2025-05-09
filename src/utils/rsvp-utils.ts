@@ -21,7 +21,7 @@ export const submitRsvp = async (formData: FormValues, attending: boolean) => {
     .insert({
       name: formData.name,
       email: formData.email,
-      dietary_restrictions: dietaryValue, // Use correct column name
+      dietary: dietaryValue, // Using 'dietary' instead of 'dietary_restrictions'
       guests: formData.guests,
       attending: attending,
     });
