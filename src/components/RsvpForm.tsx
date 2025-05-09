@@ -45,14 +45,16 @@ const RsvpForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Create a new record in the public.rsvp_responses table which doesn't have RLS restrictions
-      // and doesn't require an ID that references the users table
+      // Format dietary restrictions field to handle empty string properly
+      const dietaryValue = formData.dietary?.trim() || null;
+      
+      // Create a new record in the rsvp_responses table
       const { error } = await supabase
         .from('rsvp_responses')
         .insert({
           name: formData.name,
           email: formData.email,
-          dietary_restrictions: formData.dietary,
+          dietary_restrictions: dietaryValue, // Use correct column name
           guests: formData.guests,
           attending: attending,
         });
@@ -109,7 +111,7 @@ const RsvpForm = () => {
   return (
     <div className="max-w-md w-full mx-auto">
       <Form {...form}>
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
           <div className="text-center mb-6">
             <h3 className="text-xl font-medium">Will you be attending?</h3>
             <p className="text-sm text-gray-500 mt-2">Please let us know by December 1st, 2025</p>
@@ -181,7 +183,7 @@ const RsvpForm = () => {
               onClick={() => form.handleSubmit((data) => handleSubmitRsvp(data, true))()}
               disabled={isSubmitting}
             >
-              Yes, I'll be there
+              {isSubmitting ? "Submitting..." : "Yes, I'll be there"}
             </Button>
             
             <Button
@@ -191,7 +193,7 @@ const RsvpForm = () => {
               onClick={() => form.handleSubmit((data) => handleSubmitRsvp(data, false))()}
               disabled={isSubmitting}
             >
-              Sorry, I can't make it
+              {isSubmitting ? "Submitting..." : "Sorry, I can't make it"}
             </Button>
           </div>
         </form>
