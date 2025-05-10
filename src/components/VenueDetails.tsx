@@ -84,7 +84,7 @@ const VenueDetails: React.FC = () => {
               </p>
               <p className="text-gray-600 mb-4">
                 <span className="font-medium">Phone:</span> (555) 123-4567<br />
-                <span className="font-medium">Group Code:</span> KATE&JAMES2026
+                <span className="font-medium">Group Code:</span> AK2026
               </p>
               <p className="italic text-sm text-gray-500">
                 Special room rate available until January 14, 2026
@@ -99,7 +99,7 @@ const VenueDetails: React.FC = () => {
               </p>
               <p className="text-gray-600 mb-4">
                 <span className="font-medium">Phone:</span> (555) 987-6543<br />
-                <span className="font-medium">Group Code:</span> K&JWEDDING
+                <span className="font-medium">Group Code:</span> AKWEDDING
               </p>
               <p className="italic text-sm text-gray-500">
                 Special room rate available until January 20, 2026
