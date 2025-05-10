@@ -83,7 +83,7 @@ const VenueDetails: React.FC = () => {
                 Serenity Valley, SV 56789
               </p>
               <p className="text-gray-600 mb-4">
-                <span className="font-medium">Phone:</span> (555) 123-4567<br />
+                <span className="font-medium">Phone:</span> +91 7987398516 <br />
                 <span className="font-medium">Group Code:</span> AK2026
               </p>
               <p className="italic text-sm text-gray-500">
@@ -98,7 +98,7 @@ const VenueDetails: React.FC = () => {
                 Serenity Valley, SV 56789
               </p>
               <p className="text-gray-600 mb-4">
-                <span className="font-medium">Phone:</span> (555) 987-6543<br />
+                <span className="font-medium">Phone:</span> +91 9098190788<br />
                 <span className="font-medium">Group Code:</span> AKWEDDING
               </p>
               <p className="italic text-sm text-gray-500">
