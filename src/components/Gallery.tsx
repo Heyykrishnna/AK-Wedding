@@ -9,12 +9,12 @@ import {
 
 const Gallery: React.FC = () => {
   const placeholderImages = [
-    "https://i.postimg.cc/25ddH1n1/IMG-20250512-WA0016-2.jpg",
-    "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    "https://images.unsplash.com/photo-1507504031003-b417219a0fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    "https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    "https://i.postimg.cc/3rzBxQrJ/IMG-20250512-WA0008-2.jpg",
+    "https://i.postimg.cc/JzL5j3Bf/IMG-20250512-WA0010-2.jpg",
+    "https://i.postimg.cc/25HdpPXY/IMG-20250512-WA0014-3.jpg",
+    "https://i.postimg.cc/g2Hqsw-Vn/IMG-20250512-WA0016-3.jpg",
+    "https://i.postimg.cc/pdVQ62Ck/IMG-20250512-WA0022-2.jpg",
+    "https://i.postimg.cc/cCddQb0K/IMG-20250512-WA0020-2.jpg",
   ];
   
   return (
