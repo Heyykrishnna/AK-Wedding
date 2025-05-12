@@ -41,7 +41,7 @@ const Gallery: React.FC = () => {
                         className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span className="text-white font-cormorant text-xl">Our Story</span>
+                        <span className="text-white font-cormorant text-xl">Love <3</span>
                       </div>
                     </div>
                   </div>
