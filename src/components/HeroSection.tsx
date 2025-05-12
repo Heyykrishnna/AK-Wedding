@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
         <div className="animate-fade-in">
           <h2 className="font-montserrat text-sm md:text-base uppercase tracking-[0.3em] text-gray-500 mb-4">We're Getting Married</h2>
           <h1 className="font-cormorant text-5xl md:text-7xl lg:text-8xl text-wedding-mauve font-light mb-6">
-            Akansha <span className="font-cormorant italic">&</span> Kush
+            <b>Akansha</b> <span className="font-cormorant italic">&</span> <b>Kush</b>
           </h1>
 
           <div className="w-24 h-px bg-wedding-gold mx-auto my-8"></div>
