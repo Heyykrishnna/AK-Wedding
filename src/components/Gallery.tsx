@@ -9,7 +9,7 @@ import {
 
 const Gallery: React.FC = () => {
   const placeholderImages = [
-    "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    "https://photos.google.com/share/AF1QipP2sxCZ1F7O8oKqx3ukbV36gIadqWGXYVx-9bX3fvULKV2KIJVGjWYIOVxzZewxMw/photo/AF1QipOPrwffVu4fdf0ve2dVxg3UWfIoi9v4E1cURg83?key=aWwtRTAzUUlHQ3ZTRTlJSUlkRzJNS0UyMHY1NTlR",
     "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
