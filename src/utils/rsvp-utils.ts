@@ -16,15 +16,14 @@ export const submitRsvp = async (formData: FormValues, attending: boolean) => {
   const dietaryValue = formData.dietary?.trim() || null;
   
   // Create a new record in the rsvp_responses table
-  // Removing the dietary field since it doesn't exist in the table
   const { error } = await supabase
     .from('rsvp_responses')
     .insert({
       name: formData.name,
       email: formData.email,
-      // Removing the dietary field since it doesn't exist in the table
       guests: formData.guests,
       attending: attending,
+      dietary: dietaryValue, // Now including dietary information in the database insert
     });
   
   if (error) {
