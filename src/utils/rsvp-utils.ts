@@ -23,7 +23,7 @@ export const submitRsvp = async (formData: FormValues, attending: boolean) => {
       email: formData.email,
       guests: formData.guests,
       attending: attending,
-      dietary: dietaryValue, // Now including dietary information in the database insert
+      dietary: dietaryValue,
     });
   
   if (error) {
