@@ -1,5 +1,7 @@
 
 import Countdown from './Countdown';
+import AudioPlayer from './AudioPlayer';
+import { defaultMusic } from '@/lib/backgroundMusic';
 
 const HeroSection: React.FC = () => {
   // Wedding date updated to March 5th, 2026
@@ -46,6 +48,9 @@ const HeroSection: React.FC = () => {
           </svg>
         </a>
       </div>
+      
+      {/* Add AudioPlayer component */}
+      <AudioPlayer audioSrc={defaultMusic.file} />
     </section>
   );
 };
