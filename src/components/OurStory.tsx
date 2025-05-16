@@ -11,14 +11,14 @@ const OurStory: React.FC = () => {
           <div className="animate-fade-in">
             <h3 className="font-cormorant text-3xl mb-4 text-wedding-mauve">How We Met</h3>
             <p className="mb-4">
-              It was a crisp autumn day at the local farmer's market. Kate was selecting fresh flowers 
-              for her apartment, and James was buying ingredients for his famous homemade pasta. 
-              Their eyes met over a basket of heirloom tomatoes, and the rest, as they say, is history.
+              On a quiet morning in the office of TCS, where screens flickered softly and the air buzzed with beginnings, I sat with a new laptop and a thousand dreams folded in code. 
+              The light spilled gently across the desk, as if fate itself leaned closer to see what would unfold. And there he was—Kush, like a whispered verse in a familiar song I hadn’t known I was waiting for. 
+              Our eyes met not with thunder, but with the hush of something eternal, like the first page of a story already written in the stars.
             </p>
             <p>
-              What started as a casual conversation about cooking turned into a three-hour coffee date, 
-              and neither of us have looked back since. Sometimes, love finds you when you're simply 
-              going about your day, looking for tomatoes.
+              He smiled, not with words but with a warmth that melted time, and suddenly the keyboard in front of me seemed less important than the poetry sitting across the room. 
+              There was laughter, soft and hesitant, like petals brushing against glass, and in that moment of clumsy introductions and shared tech troubles, love quietly found its way between the bytes and blinking cursors. 
+              We didn’t know it then, but something sacred had begun—two souls syncing in a rhythm more powerful than any machine could measure.
             </p>
           </div>
         );
