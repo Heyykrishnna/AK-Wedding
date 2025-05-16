@@ -4,7 +4,7 @@ export const backgroundMusicOptions = [
   {
     id: 'romance',
     name: 'Romantic Wedding',
-    file: '/music/romantic-wedding.mp3',
+    file: '/music/BGM.mp3',
     description: 'A beautiful piano melody perfect for wedding celebrations'
   }
 ];

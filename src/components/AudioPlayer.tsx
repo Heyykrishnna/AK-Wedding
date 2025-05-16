@@ -10,18 +10,25 @@ interface AudioPlayerProps {
 const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc, autoPlay = false }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const togglePlay = () => {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
+        setIsPlaying(false);
       } else {
-        audioRef.current.play().catch(error => {
-          console.log('Playback prevented by browser:', error);
-        });
+        audioRef.current.play()
+          .then(() => {
+            setIsPlaying(true);
+            setError(null);
+          })
+          .catch(error => {
+            console.log('Playback prevented by browser:', error);
+            setError('Unable to play audio');
+          });
       }
-      setIsPlaying(!isPlaying);
     }
   };
 
@@ -30,6 +37,16 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc, autoPlay = false })
       audioRef.current.muted = !isMuted;
       setIsMuted(!isMuted);
     }
+  };
+
+  const handleCanPlayThrough = () => {
+    setError(null);
+  };
+
+  const handleError = (e: React.SyntheticEvent<HTMLAudioElement>) => {
+    console.log('Audio error:', e);
+    setError('Error loading audio file');
+    setIsPlaying(false);
   };
 
   useEffect(() => {
@@ -52,7 +69,13 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc, autoPlay = false })
 
   return (
     <div className="fixed bottom-8 right-8 z-50 bg-black/50 backdrop-blur-sm rounded-full p-3 shadow-lg border border-wedding-gold/30">
-      <audio ref={audioRef} src={audioSrc} loop />
+      <audio 
+        ref={audioRef} 
+        src={audioSrc} 
+        loop 
+        onCanPlayThrough={handleCanPlayThrough}
+        onError={handleError}
+      />
       
       <div className="flex items-center gap-3">
         <button 
@@ -77,6 +100,11 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc, autoPlay = false })
           }
         </button>
       </div>
+      {error && (
+        <div className="absolute -top-10 left-0 right-0 bg-red-500/80 text-white text-xs py-1 px-3 rounded text-center">
+          {error}
+        </div>
+      )}
     </div>
   );
 };
