@@ -37,28 +37,28 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, className }) => {
   return (
     <div className={`flex flex-wrap justify-center gap-4 md:gap-8 ${className}`}>
       <div className="flex flex-col items-center">
-        <div className="font-cormorant text-4xl sm:text-5xl md:text-6xl text-wedding-mauve">
+        <div className="font-cormorant text-4xl sm:text-5xl md:text-6xl text-wedding-mauve font-bold">
           {timeLeft.days}
         </div>
-        <div className="text-sm uppercase tracking-widest text-gray-600 mt-2">Days</div>
+        <div className="text-sm uppercase tracking-widest text-gray-600 mt-2 font-bold">Days</div>
       </div>
       <div className="flex flex-col items-center">
-        <div className="font-cormorant text-4xl sm:text-5xl md:text-6xl text-wedding-mauve">
+        <div className="font-cormorant text-4xl sm:text-5xl md:text-6xl text-wedding-mauve font-bold">
           {timeLeft.hours}
         </div>
-        <div className="text-sm uppercase tracking-widest text-gray-600 mt-2">Hours</div>
+        <div className="text-sm uppercase tracking-widest text-gray-600 mt-2 font-bold">Hours</div>
       </div>
       <div className="flex flex-col items-center">
-        <div className="font-cormorant text-4xl sm:text-5xl md:text-6xl text-wedding-mauve">
+        <div className="font-cormorant text-4xl sm:text-5xl md:text-6xl text-wedding-mauve font-bold">
           {timeLeft.minutes}
         </div>
-        <div className="text-sm uppercase tracking-widest text-gray-600 mt-2">Minutes</div>
+        <div className="text-sm uppercase tracking-widest text-gray-600 mt-2 font-bold">Minutes</div>
       </div>
       <div className="flex flex-col items-center">
-        <div className="font-cormorant text-4xl sm:text-5xl md:text-6xl text-wedding-mauve">
+        <div className="font-cormorant text-4xl sm:text-5xl md:text-6xl text-wedding-mauve font-bold">
           {timeLeft.seconds}
         </div>
-        <div className="text-sm uppercase tracking-widest text-gray-600 mt-2">Seconds</div>
+        <div className="text-sm uppercase tracking-widest text-gray-600 mt-2 font-bold">Seconds</div>
       </div>
     </div>
   );

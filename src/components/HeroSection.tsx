@@ -2,8 +2,8 @@
 import Countdown from './Countdown';
 
 const HeroSection: React.FC = () => {
-  // Wedding date in February 2026
-  const weddingDate = new Date('2026-02-14T16:00:00');
+  // Wedding date updated to March 5th, 2026
+  const weddingDate = new Date('2026-03-05T16:00:00');
 
   return (
     <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-floral">
@@ -33,7 +33,7 @@ const HeroSection: React.FC = () => {
           
           <div className="mt-8">
             <p className="font-montserrat text-md md:text-lg text-wedding-cream">
-              February 14th, 2026 | Paradise Gardens
+              March 5th, 2026 | Paradise Gardens
             </p>
           </div>
         </div>
