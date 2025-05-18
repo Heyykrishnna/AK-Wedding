@@ -13,7 +13,7 @@ const Gallery: React.FC = () => {
     "https://i.postimg.cc/3rzBxQrJ/IMG-20250512-WA0008-2.jpg",
     "https://i.postimg.cc/JzL5j3Bf/IMG-20250512-WA0010-2.jpg",
     "https://i.postimg.cc/25HdpPXY/IMG-20250512-WA0014-3.jpg",
-    "https://i.postimg.cc/g2Hqsw-Vn/IMG-20250512-WA0016-3.jpg",
+    "https://i.postimg.cc/vTtFG3L7/IMG-20250518-WA0005-2.jpg",
     "https://i.postimg.cc/pdVQ62Ck/IMG-20250512-WA0022-2.jpg",
     "https://i.postimg.cc/cCddQb0K/IMG-20250512-WA0020-2.jpg",
   ];
