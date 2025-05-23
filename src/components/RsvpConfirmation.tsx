@@ -19,7 +19,7 @@ const RsvpConfirmation = ({ userResponse, formValues, onReset }: RsvpConfirmatio
       <p className="mb-6 text-gray-600">
         {userResponse === 'attending'
           ? `We're looking forward to celebrating with you${formValues.guests > 0 
-              ? ` and your ${formValues.guests} guest${formValues.guests === 1 ? '' : 's'}` 
+              ? ` and our ${formValues.guests} guest${formValues.guests === 1 ? '' : 's'}` 
               : ''}.`
           : "We'll miss having you with us on our special day."}
       </p>
