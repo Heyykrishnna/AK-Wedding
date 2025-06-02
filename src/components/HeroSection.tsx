@@ -4,8 +4,8 @@ import { defaultMusic } from '@/lib/backgroundMusic';
 import { Flower } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
-  // Wedding date updated to March 5th, 2026
-  const weddingDate = new Date('2026-03-05T16:00:00');
+  // Wedding date updated to April 20th, 2026
+  const weddingDate = new Date('2026-04-20T16:00:00');
 
   return (
     <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-floral">
@@ -123,7 +123,7 @@ const HeroSection: React.FC = () => {
           
           <div className="mt-8">
             <p className="font-montserrat text-md md:text-lg text-wedding-cream">
-              March 5th, 2026 | Paradise Gardens
+              April 20th, 2026 | Paradise Gardens
             </p>
           </div>
         </div>
