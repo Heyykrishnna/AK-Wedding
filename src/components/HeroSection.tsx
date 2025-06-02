@@ -1,4 +1,3 @@
-
 import Countdown from './Countdown';
 import AudioPlayer from './AudioPlayer';
 import { defaultMusic } from '@/lib/backgroundMusic';
@@ -13,32 +12,93 @@ const HeroSection: React.FC = () => {
       {/* Darker overlay with more opacity */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-wedding-mauve/60 to-gray-800/70 pointer-events-none" />
       
-      {/* Minimal Indian wedding flowers decoration */}
+      {/* Enhanced Indian wedding flowers decoration with stems and petals */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Top left corner flowers */}
-        <div className="absolute top-10 left-10 text-wedding-gold/30">
-          <Flower className="w-6 h-6 rotate-12" />
-        </div>
-        <div className="absolute top-20 left-16 text-wedding-gold/20">
-          <Flower className="w-4 h-4 rotate-45" />
+        {/* Top left corner flower with stem */}
+        <div className="absolute top-8 left-8 text-wedding-gold/40">
+          <svg width="80" height="120" viewBox="0 0 80 120" fill="currentColor" className="drop-shadow-lg">
+            {/* Stem */}
+            <path d="M40 120 Q38 100 36 80 Q34 60 32 40" stroke="currentColor" strokeWidth="3" fill="none" opacity="0.6"/>
+            {/* Leaves */}
+            <ellipse cx="25" cy="70" rx="8" ry="15" transform="rotate(-30 25 70)" opacity="0.5"/>
+            <ellipse cx="55" cy="60" rx="6" ry="12" transform="rotate(45 55 60)" opacity="0.5"/>
+            {/* Main flower */}
+            <g transform="translate(40, 30)">
+              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(0)" opacity="0.8"/>
+              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(45)" opacity="0.7"/>
+              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(90)" opacity="0.8"/>
+              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(135)" opacity="0.7"/>
+              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(180)" opacity="0.8"/>
+              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(225)" opacity="0.7"/>
+              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(270)" opacity="0.8"/>
+              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(315)" opacity="0.7"/>
+              <circle cx="0" cy="-15" r="4" opacity="0.9"/>
+            </g>
+          </svg>
         </div>
         
-        {/* Top right corner flowers */}
-        <div className="absolute top-10 right-10 text-wedding-gold/30">
-          <Flower className="w-6 h-6 -rotate-12" />
-        </div>
-        <div className="absolute top-20 right-16 text-wedding-gold/20">
-          <Flower className="w-4 h-4 -rotate-45" />
+        {/* Top right corner flower with stem */}
+        <div className="absolute top-8 right-8 text-wedding-gold/35">
+          <svg width="70" height="100" viewBox="0 0 70 100" fill="currentColor" className="drop-shadow-lg">
+            {/* Stem */}
+            <path d="M35 100 Q37 85 39 70 Q41 55 43 40" stroke="currentColor" strokeWidth="2.5" fill="none" opacity="0.6"/>
+            {/* Leaves */}
+            <ellipse cx="50" cy="65" rx="6" ry="10" transform="rotate(30 50 65)" opacity="0.5"/>
+            <ellipse cx="20" cy="55" rx="5" ry="8" transform="rotate(-45 20 55)" opacity="0.5"/>
+            {/* Main flower */}
+            <g transform="translate(35, 25)">
+              <ellipse cx="0" cy="-12" rx="6" ry="16" transform="rotate(0)" opacity="0.8"/>
+              <ellipse cx="0" cy="-12" rx="6" ry="16" transform="rotate(60)" opacity="0.7"/>
+              <ellipse cx="0" cy="-12" rx="6" ry="16" transform="rotate(120)" opacity="0.8"/>
+              <ellipse cx="0" cy="-12" rx="6" ry="16" transform="rotate(180)" opacity="0.7"/>
+              <ellipse cx="0" cy="-12" rx="6" ry="16" transform="rotate(240)" opacity="0.8"/>
+              <ellipse cx="0" cy="-12" rx="6" ry="16" transform="rotate(300)" opacity="0.7"/>
+              <circle cx="0" cy="-12" r="3" opacity="0.9"/>
+            </g>
+          </svg>
         </div>
         
-        {/* Bottom decorative flowers */}
-        <div className="absolute bottom-32 left-20 text-wedding-gold/25">
-          <Flower className="w-5 h-5 rotate-90" />
+        {/* Bottom left decorative flower */}
+        <div className="absolute bottom-32 left-16 text-wedding-gold/30">
+          <svg width="60" height="80" viewBox="0 0 60 80" fill="currentColor" className="drop-shadow-md">
+            {/* Stem */}
+            <path d="M30 80 Q28 65 26 50" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.6"/>
+            {/* Small leaves */}
+            <ellipse cx="20" cy="60" rx="4" ry="8" transform="rotate(-20 20 60)" opacity="0.5"/>
+            <ellipse cx="40" cy="55" rx="3" ry="6" transform="rotate(25 40 55)" opacity="0.5"/>
+            {/* Flower */}
+            <g transform="translate(30, 20)">
+              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(0)" opacity="0.8"/>
+              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(72)" opacity="0.7"/>
+              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(144)" opacity="0.8"/>
+              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(216)" opacity="0.7"/>
+              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(288)" opacity="0.8"/>
+              <circle cx="0" cy="-10" r="2.5" opacity="0.9"/>
+            </g>
+          </svg>
         </div>
-        <div className="absolute bottom-32 right-20 text-wedding-gold/25">
-          <Flower className="w-5 h-5 -rotate-90" />
+        
+        {/* Bottom right decorative flower */}
+        <div className="absolute bottom-32 right-16 text-wedding-gold/30">
+          <svg width="60" height="80" viewBox="0 0 60 80" fill="currentColor" className="drop-shadow-md">
+            {/* Stem */}
+            <path d="M30 80 Q32 65 34 50" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.6"/>
+            {/* Small leaves */}
+            <ellipse cx="40" cy="60" rx="4" ry="8" transform="rotate(20 40 60)" opacity="0.5"/>
+            <ellipse cx="20" cy="55" rx="3" ry="6" transform="rotate(-25 20 55)" opacity="0.5"/>
+            {/* Flower */}
+            <g transform="translate(30, 20)">
+              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(0)" opacity="0.8"/>
+              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(72)" opacity="0.7"/>
+              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(144)" opacity="0.8"/>
+              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(216)" opacity="0.7"/>
+              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(288)" opacity="0.8"/>
+              <circle cx="0" cy="-10" r="2.5" opacity="0.9"/>
+            </g>
+          </svg>
         </div>
       </div>
+      
       
       <div className="container px-4 py-24 md:py-32 z-10 text-center">
         <div className="animate-fade-in">

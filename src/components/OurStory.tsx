@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Flower } from 'lucide-react';
 
@@ -62,36 +61,175 @@ const OurStory: React.FC = () => {
   
   return (
     <section id="our-story" className="py-20 md:py-28 bg-gradient-to-br from-purple-100 via-lavender-50 to-purple-50 relative overflow-hidden">
-      {/* Aesthetic flower decorations */}
+      {/* Enhanced aesthetic flower decorations with stems and petals */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Top scattered flowers */}
-        <div className="absolute top-16 left-1/4 text-purple-200/40">
-          <Flower className="w-8 h-8 rotate-12" />
+        {/* Top scattered flowers with detailed petals */}
+        <div className="absolute top-12 left-1/4 text-purple-300/40">
+          <svg width="60" height="90" viewBox="0 0 60 90" fill="currentColor" className="drop-shadow-sm">
+            {/* Stem */}
+            <path d="M30 90 Q28 70 26 50" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.5"/>
+            {/* Leaves */}
+            <ellipse cx="20" cy="65" rx="3" ry="8" transform="rotate(-30 20 65)" opacity="0.4"/>
+            <ellipse cx="40" cy="60" rx="2.5" ry="6" transform="rotate(30 40 60)" opacity="0.4"/>
+            {/* Flower with detailed petals */}
+            <g transform="translate(30, 15)">
+              <ellipse cx="0" cy="-8" rx="4" ry="12" transform="rotate(0)" opacity="0.7"/>
+              <ellipse cx="0" cy="-8" rx="4" ry="12" transform="rotate(45)" opacity="0.6"/>
+              <ellipse cx="0" cy="-8" rx="4" ry="12" transform="rotate(90)" opacity="0.7"/>
+              <ellipse cx="0" cy="-8" rx="4" ry="12" transform="rotate(135)" opacity="0.6"/>
+              <ellipse cx="0" cy="-8" rx="4" ry="12" transform="rotate(180)" opacity="0.7"/>
+              <ellipse cx="0" cy="-8" rx="4" ry="12" transform="rotate(225)" opacity="0.6"/>
+              <ellipse cx="0" cy="-8" rx="4" ry="12" transform="rotate(270)" opacity="0.7"/>
+              <ellipse cx="0" cy="-8" rx="4" ry="12" transform="rotate(315)" opacity="0.6"/>
+              <circle cx="0" cy="-8" r="2" opacity="0.8"/>
+            </g>
+          </svg>
         </div>
-        <div className="absolute top-32 right-1/3 text-purple-300/30">
-          <Flower className="w-6 h-6 -rotate-24" />
+        
+        <div className="absolute top-24 right-1/3 text-purple-200/35">
+          <svg width="50" height="75" viewBox="0 0 50 75" fill="currentColor" className="drop-shadow-sm">
+            {/* Stem */}
+            <path d="M25 75 Q27 60 29 45" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.5"/>
+            {/* Leaves */}
+            <ellipse cx="18" cy="55" rx="2.5" ry="6" transform="rotate(-25 18 55)" opacity="0.4"/>
+            <ellipse cx="35" cy="50" rx="2" ry="5" transform="rotate(25 35 50)" opacity="0.4"/>
+            {/* Small delicate flower */}
+            <g transform="translate(25, 12)">
+              <ellipse cx="0" cy="-6" rx="3" ry="8" transform="rotate(0)" opacity="0.7"/>
+              <ellipse cx="0" cy="-6" rx="3" ry="8" transform="rotate(60)" opacity="0.6"/>
+              <ellipse cx="0" cy="-6" rx="3" ry="8" transform="rotate(120)" opacity="0.7"/>
+              <ellipse cx="0" cy="-6" rx="3" ry="8" transform="rotate(180)" opacity="0.6"/>
+              <ellipse cx="0" cy="-6" rx="3" ry="8" transform="rotate(240)" opacity="0.7"/>
+              <ellipse cx="0" cy="-6" rx="3" ry="8" transform="rotate(300)" opacity="0.6"/>
+              <circle cx="0" cy="-6" r="1.5" opacity="0.8"/>
+            </g>
+          </svg>
         </div>
-        <div className="absolute top-24 right-1/4 text-purple-200/35">
-          <Flower className="w-5 h-5 rotate-45" />
+        
+        <div className="absolute top-16 right-1/4 text-purple-300/30">
+          <svg width="45" height="70" viewBox="0 0 45 70" fill="currentColor" className="drop-shadow-sm">
+            {/* Stem */}
+            <path d="M22.5 70 Q24 55 25.5 40" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.5"/>
+            {/* Small leaves */}
+            <ellipse cx="16" cy="50" rx="2" ry="5" transform="rotate(-20 16 50)" opacity="0.4"/>
+            <ellipse cx="30" cy="45" rx="1.5" ry="4" transform="rotate(20 30 45)" opacity="0.4"/>
+            {/* Tiny flower */}
+            <g transform="translate(22.5, 10)">
+              <ellipse cx="0" cy="-5" rx="2.5" ry="6" transform="rotate(0)" opacity="0.7"/>
+              <ellipse cx="0" cy="-5" rx="2.5" ry="6" transform="rotate(72)" opacity="0.6"/>
+              <ellipse cx="0" cy="-5" rx="2.5" ry="6" transform="rotate(144)" opacity="0.7"/>
+              <ellipse cx="0" cy="-5" rx="2.5" ry="6" transform="rotate(216)" opacity="0.6"/>
+              <ellipse cx="0" cy="-5" rx="2.5" ry="6" transform="rotate(288)" opacity="0.7"/>
+              <circle cx="0" cy="-5" r="1" opacity="0.8"/>
+            </g>
+          </svg>
         </div>
         
         {/* Middle section flowers */}
-        <div className="absolute top-1/2 left-16 text-purple-200/25">
-          <Flower className="w-7 h-7 rotate-90" />
+        <div className="absolute top-1/2 left-12 text-purple-200/25">
+          <svg width="55" height="85" viewBox="0 0 55 85" fill="currentColor" className="drop-shadow-sm">
+            {/* Stem */}
+            <path d="M27.5 85 Q25 65 22.5 45" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.5"/>
+            {/* Leaves */}
+            <ellipse cx="15" cy="60" rx="3" ry="7" transform="rotate(-35 15 60)" opacity="0.4"/>
+            <ellipse cx="38" cy="55" rx="2.5" ry="6" transform="rotate(35 38 55)" opacity="0.4"/>
+            {/* Beautiful flower */}
+            <g transform="translate(27.5, 18)">
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(0)" opacity="0.7"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(40)" opacity="0.6"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(80)" opacity="0.7"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(120)" opacity="0.6"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(160)" opacity="0.7"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(200)" opacity="0.6"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(240)" opacity="0.7"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(280)" opacity="0.6"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(320)" opacity="0.7"/>
+              <circle cx="0" cy="-10" r="2.5" opacity="0.8"/>
+            </g>
+          </svg>
         </div>
-        <div className="absolute top-1/2 right-16 text-purple-300/25">
-          <Flower className="w-7 h-7 -rotate-90" />
+        
+        <div className="absolute top-1/2 right-12 text-purple-300/25">
+          <svg width="55" height="85" viewBox="0 0 55 85" fill="currentColor" className="drop-shadow-sm">
+            {/* Stem */}
+            <path d="M27.5 85 Q30 65 32.5 45" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.5"/>
+            {/* Leaves */}
+            <ellipse cx="40" cy="60" rx="3" ry="7" transform="rotate(35 40 60)" opacity="0.4"/>
+            <ellipse cx="17" cy="55" rx="2.5" ry="6" transform="rotate(-35 17 55)" opacity="0.4"/>
+            {/* Beautiful flower */}
+            <g transform="translate(27.5, 18)">
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(0)" opacity="0.7"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(40)" opacity="0.6"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(80)" opacity="0.7"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(120)" opacity="0.6"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(160)" opacity="0.7"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(200)" opacity="0.6"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(240)" opacity="0.7"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(280)" opacity="0.6"/>
+              <ellipse cx="0" cy="-10" rx="4.5" ry="14" transform="rotate(320)" opacity="0.7"/>
+              <circle cx="0" cy="-10" r="2.5" opacity="0.8"/>
+            </g>
+          </svg>
         </div>
         
         {/* Bottom scattered flowers */}
-        <div className="absolute bottom-20 left-1/3 text-purple-200/30">
-          <Flower className="w-6 h-6 rotate-180" />
+        <div className="absolute bottom-16 left-1/3 text-purple-200/30">
+          <svg width="48" height="70" viewBox="0 0 48 70" fill="currentColor" className="drop-shadow-sm">
+            {/* Stem */}
+            <path d="M24 70 Q22 55 20 40" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.5"/>
+            {/* Leaves */}
+            <ellipse cx="14" cy="50" rx="2.5" ry="6" transform="rotate(-30 14 50)" opacity="0.4"/>
+            <ellipse cx="32" cy="45" rx="2" ry="5" transform="rotate(30 32 45)" opacity="0.4"/>
+            {/* Flower */}
+            <g transform="translate(24, 12)">
+              <ellipse cx="0" cy="-6" rx="3" ry="9" transform="rotate(0)" opacity="0.7"/>
+              <ellipse cx="0" cy="-6" rx="3" ry="9" transform="rotate(60)" opacity="0.6"/>
+              <ellipse cx="0" cy="-6" rx="3" ry="9" transform="rotate(120)" opacity="0.7"/>
+              <ellipse cx="0" cy="-6" rx="3" ry="9" transform="rotate(180)" opacity="0.6"/>
+              <ellipse cx="0" cy="-6" rx="3" ry="9" transform="rotate(240)" opacity="0.7"/>
+              <ellipse cx="0" cy="-6" rx="3" ry="9" transform="rotate(300)" opacity="0.6"/>
+              <circle cx="0" cy="-6" r="1.5" opacity="0.8"/>
+            </g>
+          </svg>
         </div>
-        <div className="absolute bottom-32 right-1/4 text-purple-300/35">
-          <Flower className="w-5 h-5 -rotate-12" />
+        
+        <div className="absolute bottom-24 right-1/4 text-purple-300/35">
+          <svg width="42" height="65" viewBox="0 0 42 65" fill="currentColor" className="drop-shadow-sm">
+            {/* Stem */}
+            <path d="M21 65 Q23 50 25 35" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.5"/>
+            {/* Leaves */}
+            <ellipse cx="30" cy="45" rx="2" ry="5" transform="rotate(25 30 45)" opacity="0.4"/>
+            <ellipse cx="12" cy="40" rx="1.5" ry="4" transform="rotate(-25 12 40)" opacity="0.4"/>
+            {/* Small flower */}
+            <g transform="translate(21, 10)">
+              <ellipse cx="0" cy="-5" rx="2.5" ry="7" transform="rotate(0)" opacity="0.7"/>
+              <ellipse cx="0" cy="-5" rx="2.5" ry="7" transform="rotate(72)" opacity="0.6"/>
+              <ellipse cx="0" cy="-5" rx="2.5" ry="7" transform="rotate(144)" opacity="0.7"/>
+              <ellipse cx="0" cy="-5" rx="2.5" ry="7" transform="rotate(216)" opacity="0.6"/>
+              <ellipse cx="0" cy="-5" rx="2.5" ry="7" transform="rotate(288)" opacity="0.7"/>
+              <circle cx="0" cy="-5" r="1" opacity="0.8"/>
+            </g>
+          </svg>
         </div>
-        <div className="absolute bottom-16 left-1/5 text-purple-200/40">
-          <Flower className="w-4 h-4 rotate-60" />
+        
+        <div className="absolute bottom-12 left-1/5 text-purple-200/40">
+          <svg width="38" height="60" viewBox="0 0 38 60" fill="currentColor" className="drop-shadow-sm">
+            {/* Stem */}
+            <path d="M19 60 Q17 45 15 30" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.5"/>
+            {/* Tiny leaves */}
+            <ellipse cx="10" cy="40" rx="1.5" ry="4" transform="rotate(-20 10 40)" opacity="0.4"/>
+            <ellipse cx="26" cy="35" rx="1" ry="3" transform="rotate(20 26 35)" opacity="0.4"/>
+            {/* Delicate flower */}
+            <g transform="translate(19, 8)">
+              <ellipse cx="0" cy="-4" rx="2" ry="6" transform="rotate(0)" opacity="0.7"/>
+              <ellipse cx="0" cy="-4" rx="2" ry="6" transform="rotate(60)" opacity="0.6"/>
+              <ellipse cx="0" cy="-4" rx="2" ry="6" transform="rotate(120)" opacity="0.7"/>
+              <ellipse cx="0" cy="-4" rx="2" ry="6" transform="rotate(180)" opacity="0.6"/>
+              <ellipse cx="0" cy="-4" rx="2" ry="6" transform="rotate(240)" opacity="0.7"/>
+              <ellipse cx="0" cy="-4" rx="2" ry="6" transform="rotate(300)" opacity="0.6"/>
+              <circle cx="0" cy="-4" r="0.8" opacity="0.8"/>
+            </g>
+          </svg>
         </div>
       </div>
 
