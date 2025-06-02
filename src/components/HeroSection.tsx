@@ -2,6 +2,7 @@
 import Countdown from './Countdown';
 import AudioPlayer from './AudioPlayer';
 import { defaultMusic } from '@/lib/backgroundMusic';
+import { Flower } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   // Wedding date updated to March 5th, 2026
@@ -11,6 +12,33 @@ const HeroSection: React.FC = () => {
     <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-floral">
       {/* Darker overlay with more opacity */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-wedding-mauve/60 to-gray-800/70 pointer-events-none" />
+      
+      {/* Minimal Indian wedding flowers decoration */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Top left corner flowers */}
+        <div className="absolute top-10 left-10 text-wedding-gold/30">
+          <Flower className="w-6 h-6 rotate-12" />
+        </div>
+        <div className="absolute top-20 left-16 text-wedding-gold/20">
+          <Flower className="w-4 h-4 rotate-45" />
+        </div>
+        
+        {/* Top right corner flowers */}
+        <div className="absolute top-10 right-10 text-wedding-gold/30">
+          <Flower className="w-6 h-6 -rotate-12" />
+        </div>
+        <div className="absolute top-20 right-16 text-wedding-gold/20">
+          <Flower className="w-4 h-4 -rotate-45" />
+        </div>
+        
+        {/* Bottom decorative flowers */}
+        <div className="absolute bottom-32 left-20 text-wedding-gold/25">
+          <Flower className="w-5 h-5 rotate-90" />
+        </div>
+        <div className="absolute bottom-32 right-20 text-wedding-gold/25">
+          <Flower className="w-5 h-5 -rotate-90" />
+        </div>
+      </div>
       
       <div className="container px-4 py-24 md:py-32 z-10 text-center">
         <div className="animate-fade-in">

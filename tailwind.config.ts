@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -69,6 +68,18 @@ export default {
 					cream: '#FFF9F0',
 					sage: '#D0D8C0',
 					mauve: '#A17188',
+				},
+				lavender: {
+					50: '#f8f6ff',
+					100: '#f0ebff',
+					200: '#e4d9ff',
+					300: '#d1bfff',
+					400: '#b899ff',
+					500: '#9d6fff',
+					600: '#8b47ff',
+					700: '#7a2fff',
+					800: '#6b1fff',
+					900: '#5b17d9'
 				}
 			},
 			fontFamily: {
