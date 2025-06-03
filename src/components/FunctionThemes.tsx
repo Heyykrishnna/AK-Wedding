@@ -129,7 +129,7 @@ const FunctionThemes = () => {
 
         {/* Additional styling note */}
         <div className="mt-16 text-center">
-          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 max-w-3xl mx-auto border border-wedding-gold/20">
+          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 max-w-3xl mx-auto border border-wedding-gold/60">
             <h3 className="text-2xl font-cormorant font-semibold text-wedding-mauve mb-4">
               Style Guidelines
             </h3>
