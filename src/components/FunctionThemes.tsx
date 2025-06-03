@@ -24,7 +24,7 @@ const FunctionThemes = () => {
       accentColor: "text-green-600"
     },
     {
-      name: "Sangam",
+      name: "Sagai (Ring Ceremony)",
       description: "The union ceremony",
       colors: {
         men: "Maroon & Gold",
