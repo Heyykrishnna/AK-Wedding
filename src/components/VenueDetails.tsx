@@ -18,16 +18,16 @@ const VenueDetails: React.FC = () => {
             <h3 className="font-cormorant text-3xl mb-4 text-wedding-mauve">Ceremony</h3>
             <div className="flex items-center justify-center space-x-2 mb-2">
               <Calendar className="h-5 w-5 text-wedding-gold" />
-              <p className="text-gray-700">February 14th, 2026</p>
+              <p className="text-gray-700">April 20th, 2026</p>
             </div>
             <div className="flex items-center justify-center space-x-2 mb-6">
               <Clock className="h-5 w-5 text-wedding-gold" />
               <p className="text-gray-700">4:00 PM</p>
             </div>
             <p className="text-gray-600 mb-4">
-              Paradise Gardens<br />
-              1234 Blossom Lane<br />
-              Serenity Valley, SV 56789
+              Hotel Royal Bistro<br />
+              Canada Palace, Nr. Reliance Smart<br />
+              Bypass Road, Mehsana, 384 002
             </p>
             <p className="italic text-sm text-gray-500 mb-6">
               The ceremony will be held in the garden pavilion. In case of inclement weather, 
@@ -47,16 +47,16 @@ const VenueDetails: React.FC = () => {
             <h3 className="font-cormorant text-3xl mb-4 text-wedding-mauve">Reception</h3>
             <div className="flex items-center justify-center space-x-2 mb-2">
               <Calendar className="h-5 w-5 text-wedding-gold" />
-              <p className="text-gray-700">February 14th, 2026</p>
+              <p className="text-gray-700">April 20th, 2026</p>
             </div>
             <div className="flex items-center justify-center space-x-2 mb-6">
               <Clock className="h-5 w-5 text-wedding-gold" />
               <p className="text-gray-700">6:00 PM</p>
             </div>
             <p className="text-gray-600 mb-4">
-              Paradise Gardens Grand Hall<br />
-              1234 Blossom Lane<br />
-              Serenity Valley, SV 56789
+              Hotel Royal Bistro<br />
+              Canada Palace, Nr. Reliance Smart<br />
+              Bypass Road, Mehsana, 384 002
             </p>
             <p className="italic text-sm text-gray-500 mb-6">
               Dinner, dancing, and celebration to follow the ceremony. 
