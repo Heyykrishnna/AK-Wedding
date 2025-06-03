@@ -130,9 +130,9 @@ const FunctionThemes = () => {
         {/* Additional styling note */}
         <div className="mt-16 text-center">
           <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 max-w-3xl mx-auto border border-wedding-gold/85">
-            <h2 className="text-2xl font-cormorant font-semibold text-wedding-mauve mb-4">
+            <h3 className="text-2xl font-cormorant font-bold text-wedding-mauve mb-4">
               Style Guidelines
-            </h2>
+            </h3>
             <p className="text-gray-700 leading-relaxed">
               These are suggested color palettes to help coordinate our celebration. Feel free to incorporate these colors 
               in your traditional or contemporary attire. Your comfort and joy in celebrating with us is what matters most!
