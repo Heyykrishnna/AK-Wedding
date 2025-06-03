@@ -123,7 +123,7 @@ const HeroSection: React.FC = () => {
           
           <div className="mt-8">
             <p className="font-montserrat text-md md:text-lg text-wedding-cream">
-              April 20th, 2026 | Paradise Gardens
+              April 20th, 2026 | HOTEL ROYAL BISTRO
             </p>
           </div>
         </div>
