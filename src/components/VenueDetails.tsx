@@ -31,10 +31,10 @@ const VenueDetails: React.FC = () => {
             </p>
             <p className="italic text-sm text-gray-500 mb-6">
               The ceremony will be held in the garden pavilion. In case of inclement weather, 
-              we will move to the grand hall.
+              We will move to the grand hall.
             </p>
             <a 
-              href="https://maps.google.com" 
+              href="https://www.google.com/maps/place/Hotel+Royal+Bistro/@23.6177148,72.3432253,602m/data=!3m2!1e3!4b1!4m9!3m8!1s0x395c43ea4a703a1b:0x70bb34b76d1d1d02!5m2!4m1!1i2!8m2!3d23.6177099!4d72.3458002!16s%2Fg%2F11y2spj57f?entry=ttu&g_ep=EgoyMDI1MDYwMS4wIKXMDSoASAFQAw%3D%3D" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-block px-6 py-2 bg-wedding-mauve text-white rounded-md hover:bg-wedding-mauve/90 transition-colors duration-300"
@@ -59,11 +59,11 @@ const VenueDetails: React.FC = () => {
               Bypass Road, Mehsana, 384 002
             </p>
             <p className="italic text-sm text-gray-500 mb-6">
-              Dinner, dancing, and celebration to follow the ceremony. 
-              Cocktail attire is requested.
+              Dinner, dancing, and a celebration to follow the ceremony. 
+              We would like to ask you for cocktail attire.
             </p>
             <a 
-              href="https://maps.google.com" 
+              href="https://www.google.com/maps/place/Hotel+Royal+Bistro/@23.6177148,72.3432253,602m/data=!3m2!1e3!4b1!4m9!3m8!1s0x395c43ea4a703a1b:0x70bb34b76d1d1d02!5m2!4m1!1i2!8m2!3d23.6177099!4d72.3458002!16s%2Fg%2F11y2spj57f?entry=ttu&g_ep=EgoyMDI1MDYwMS4wIKXMDSoASAFQAw%3D%3D" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-block px-6 py-2 bg-wedding-mauve text-white rounded-md hover:bg-wedding-mauve/90 transition-colors duration-300"
@@ -92,10 +92,10 @@ const VenueDetails: React.FC = () => {
             </div>
             
             <div>
-              <h4 className="font-cormorant text-xl mb-3 text-gray-800">Valley View Inn</h4>
+              <h4 className="font-cormorant text-xl mb-3 text-gray-800">Hotel Royal Bistro</h4>
               <p className="text-gray-600 mb-2">
-                789 Valley Road<br />
-                Serenity Valley, SV 56789
+                Canada Palace, Nr. Reliance Smart<br />
+                Bypass Road, Mehsana, 384 002
               </p>
               <p className="text-gray-600 mb-4">
                 <span className="font-medium">Phone:</span> +91 9098190788<br />
