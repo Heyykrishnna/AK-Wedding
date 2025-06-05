@@ -93,11 +93,12 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({
           <h1 className="text-3xl font-bold text-lavender-700 font-cormorant animate-fade-in" style={{ animationDelay: '0.5s' }}>
             गणपति बप्पा मोरया
           </h1>
-          <p className="text-lg text-orange-600 font-medium animate-fade-in" style={{ animationDelay: '1s' }}>
+          <h3 className="text-lg text-orange-600 font-medium animate-fade-in" style={{ animationDelay: '1s' }}>
             मंगलमूर्ति मोरया
-          </p>
+          </h3>
           <p className="text-sm text-lavender-600 italic animate-fade-in" style={{ animationDelay: '1.5s' }}>
-            विघ्न हर्ता मंगल कर्ता
+            ॐ शुभमंगलाय देवाय, सिंहवाहन मूर्तये।
+            विघ्नराजाय शुद्धाय, शुभदं देहि मे सदा॥
           </p>
         </div>
 
