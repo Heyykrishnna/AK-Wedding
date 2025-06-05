@@ -20,7 +20,12 @@ const App = () => {
   };
 
   if (isLoading) {
-    return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
+    return (
+      <LoadingScreen 
+        onLoadingComplete={handleLoadingComplete}
+        ganeshaImageUrl="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=200&h=200&fit=crop&crop=face"
+      />
+    );
   }
 
   return (
