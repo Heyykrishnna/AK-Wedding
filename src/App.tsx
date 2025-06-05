@@ -23,7 +23,7 @@ const App = () => {
     return (
       <LoadingScreen 
         onLoadingComplete={handleLoadingComplete}
-        ganeshaImageUrl="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=200&h=200&fit=crop&crop=face"
+        ganeshaImageUrl="https://yogendrarastogi.com/cdn/shop/files/A02.jpg?w=200&h=200&fit=crop&crop=face"
       />
     );
   }
