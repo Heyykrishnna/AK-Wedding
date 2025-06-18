@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -46,11 +45,21 @@ const RsvpForm = () => {
       });
     } catch (error: any) {
       console.error("Error submitting RSVP:", error);
-      toast({
-        title: "Error submitting RSVP",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
+      
+      // Handle duplicate RSVP case
+      if (error.message === 'DUPLICATE_RSVP') {
+        toast({
+          title: "RSVP Already Submitted",
+          description: "You have already submitted the RSVP and we are pleased to have you.",
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Error submitting RSVP",
+          description: "Please try again later.",
+          variant: "destructive",
+        });
+      }
     } finally {
       setIsSubmitting(false);
     }

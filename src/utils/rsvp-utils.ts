@@ -28,6 +28,12 @@ export const submitRsvp = async (formData: FormValues, attending: boolean) => {
   
   if (error) {
     console.error("Error details:", error);
+    
+    // Check if it's a duplicate key error (name already exists)
+    if (error.code === '23505' && error.message.includes('rsvp_responses_pkey')) {
+      throw new Error('DUPLICATE_RSVP');
+    }
+    
     throw error;
   }
   
