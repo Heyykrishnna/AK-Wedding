@@ -6,180 +6,219 @@ const CartoonCutouts = () => {
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {/* Girl Cutout - Left Side */}
       <div className="absolute left-8 bottom-0 z-10">
-        <svg width="180" height="350" viewBox="0 0 180 350" className="drop-shadow-2xl">
-          {/* Girl Figure - More realistic proportions */}
-          <g transform="translate(40, 30)">
-            {/* Hair - More detailed and flowing */}
-            <path d="M50 25 C25 15, 15 35, 18 50 C12 70, 20 85, 35 88 C40 90, 45 88, 50 85 C55 88, 60 90, 65 88 C80 85, 88 70, 82 50 C85 35, 75 15, 50 25 Z" 
-                  fill="#8B4513" opacity="0.95"/>
-            <path d="M20 45 C15 50, 18 58, 25 60 C30 62, 35 58, 32 52 C30 48, 25 45, 20 45 Z" 
-                  fill="#8B4513" opacity="0.9"/>
-            <path d="M80 45 C85 50, 82 58, 75 60 C70 62, 65 58, 68 52 C70 48, 75 45, 80 45 Z" 
-                  fill="#8B4513" opacity="0.9"/>
+        <svg width="200" height="400" viewBox="0 0 200 400" className="drop-shadow-2xl">
+          {/* Girl Figure - Realistic proportions */}
+          <g transform="translate(50, 40)">
+            {/* Hair - Long flowing hair */}
+            <path d="M50 20 C20 10, 10 30, 15 55 C8 80, 18 100, 35 105 C40 108, 45 106, 50 102 C55 106, 60 108, 65 105 C82 100, 92 80, 85 55 C90 30, 80 10, 50 20 Z" 
+                  fill="#8B4513" stroke="#654321" strokeWidth="1"/>
             
-            {/* Face - More realistic shape */}
-            <ellipse cx="50" cy="55" rx="18" ry="22" fill="#FDBCB4"/>
+            {/* Hair highlights and texture */}
+            <path d="M25 45 C20 50, 23 65, 30 68 C35 70, 40 65, 37 58 C35 52, 30 45, 25 45 Z" 
+                  fill="#A0522D" opacity="0.8"/>
+            <path d="M75 45 C80 50, 77 65, 70 68 C65 70, 60 65, 63 58 C65 52, 70 45, 75 45 Z" 
+                  fill="#A0522D" opacity="0.8"/>
             
-            {/* Eyebrows */}
-            <path d="M40 48 C43 46, 47 46, 50 48" stroke="#654321" strokeWidth="1.5" fill="none"/>
-            <path d="M50 48 C53 46, 57 46, 60 48" stroke="#654321" strokeWidth="1.5" fill="none"/>
+            {/* Face - More realistic skin tone and shape */}
+            <ellipse cx="50" cy="65" rx="22" ry="28" fill="#FDBCB4" stroke="#E8A798" strokeWidth="0.5"/>
             
-            {/* Eyes - More detailed */}
-            <ellipse cx="43" cy="52" rx="4" ry="3" fill="white"/>
-            <ellipse cx="57" cy="52" rx="4" ry="3" fill="white"/>
-            <circle cx="43" cy="52" r="2.5" fill="#4A4A4A"/>
-            <circle cx="57" cy="52" r="2.5" fill="#4A4A4A"/>
-            <circle cx="42" cy="51" r="0.8" fill="white"/>
-            <circle cx="56" cy="51" r="0.8" fill="white"/>
+            {/* Face shadows for depth */}
+            <ellipse cx="35" cy="70" rx="3" ry="8" fill="#E8A798" opacity="0.3"/>
+            <ellipse cx="65" cy="70" rx="3" ry="8" fill="#E8A798" opacity="0.3"/>
+            
+            {/* Eyebrows - More defined */}
+            <path d="M38 55 C42 52, 48 52, 52 55" stroke="#654321" strokeWidth="2" fill="none"/>
+            <path d="M48 55 C52 52, 58 52, 62 55" stroke="#654321" strokeWidth="2" fill="none"/>
+            
+            {/* Eyes - More realistic with details */}
+            <ellipse cx="42" cy="62" rx="5" ry="4" fill="white" stroke="#DDD" strokeWidth="0.5"/>
+            <ellipse cx="58" cy="62" rx="5" ry="4" fill="white" stroke="#DDD" strokeWidth="0.5"/>
+            <circle cx="42" cy="62" r="3" fill="#2E7D32"/>
+            <circle cx="58" cy="62" r="3" fill="#2E7D32"/>
+            <circle cx="41" cy="61" r="1" fill="white"/>
+            <circle cx="57" cy="61" r="1" fill="white"/>
             
             {/* Eyelashes */}
-            <path d="M39 50 L39 48 M41 49 L40 47 M45 49 L45 47 M47 50 L48 48" stroke="#4A4A4A" strokeWidth="0.8"/>
-            <path d="M53 50 L52 48 M55 49 L55 47 M59 49 L60 47 M61 50 L61 48" stroke="#4A4A4A" strokeWidth="0.8"/>
+            <path d="M37 59 L36 57 M39 58 L38 56 M44 58 L44 56 M46 59 L47 57" stroke="#2C1810" strokeWidth="1"/>
+            <path d="M53 59 L52 57 M55 58 L55 56 M61 58 L62 56 M63 59 L64 57" stroke="#2C1810" strokeWidth="1"/>
             
             {/* Nose - More defined */}
-            <path d="M50 58 C49 60, 51 60, 50 58" fill="#E8A798"/>
-            <ellipse cx="49" cy="59" rx="0.5" ry="1" fill="#D49B8C" opacity="0.6"/>
-            <ellipse cx="51" cy="59" rx="0.5" ry="1" fill="#D49B8C" opacity="0.6"/>
+            <path d="M50 70 C48 73, 52 73, 50 70" fill="#E8A798" stroke="#D49B8C" strokeWidth="0.5"/>
+            <ellipse cx="48.5" cy="72" rx="0.8" ry="1.5" fill="#D49B8C" opacity="0.7"/>
+            <ellipse cx="51.5" cy="72" rx="0.8" ry="1.5" fill="#D49B8C" opacity="0.7"/>
             
             {/* Lips - More realistic */}
-            <path d="M46 65 Q50 68, 54 65 Q52 67, 50 67 Q48 67, 46 65" fill="#D2527F"/>
-            <path d="M47 65 Q50 66, 53 65" stroke="#B8446B" strokeWidth="0.5" fill="none"/>
+            <path d="M44 80 Q50 85, 56 80 Q53 83, 50 83 Q47 83, 44 80" fill="#C2185B" stroke="#9C1458" strokeWidth="0.5"/>
+            <path d="M45 80 Q50 82, 55 80" stroke="#E91E63" strokeWidth="0.8" fill="none" opacity="0.6"/>
             
-            {/* Body - Modern fitted dress */}
-            <path d="M32 80 C32 78, 34 76, 38 76 L62 76 C66 76, 68 78, 68 80 L70 130 C70 135, 68 140, 65 140 L35 140 C32 140, 30 135, 30 130 Z" 
-                  fill="#E91E63"/>
-            <path d="M36 80 L64 80 C65 80, 66 81, 66 82 L68 125 C68 128, 66 130, 64 130 L36 130 C34 130, 32 128, 32 125 L34 82 C34 81, 35 80, 36 80 Z" 
-                  fill="#F48FB1" opacity="0.7"/>
+            {/* Neck */}
+            <rect x="45" y="93" width="10" height="15" fill="#FDBCB4" rx="3"/>
+            
+            {/* Body - Elegant dress */}
+            <path d="M30 108 C30 105, 33 102, 38 102 L62 102 C67 102, 70 105, 70 108 L75 170 C75 178, 70 185, 65 185 L35 185 C30 185, 25 178, 25 170 Z" 
+                  fill="#E91E63" stroke="#C2185B" strokeWidth="1"/>
+            
+            {/* Dress details and patterns */}
+            <path d="M35 110 L65 110 C67 110, 68 112, 68 114 L72 165 C72 170, 68 175, 65 175 L35 175 C32 175, 28 170, 28 165 L32 114 C32 112, 33 110, 35 110 Z" 
+                  fill="#F48FB1" opacity="0.6"/>
+            
+            {/* Dress belt */}
+            <rect x="32" y="125" width="36" height="4" fill="#9C1458" rx="2"/>
+            <circle cx="50" cy="127" r="3" fill="#FFD700" stroke="#DAA520" strokeWidth="0.5"/>
             
             {/* Arms - More realistic */}
-            <ellipse cx="25" cy="95" rx="6" ry="20" fill="#FDBCB4" transform="rotate(-15 25 95)"/>
-            <ellipse cx="75" cy="95" rx="6" ry="20" fill="#FDBCB4" transform="rotate(15 75 95)"/>
+            <ellipse cx="20" cy="125" rx="8" ry="25" fill="#FDBCB4" transform="rotate(-20 20 125)" stroke="#E8A798" strokeWidth="0.5"/>
+            <ellipse cx="80" cy="125" rx="8" ry="25" fill="#FDBCB4" transform="rotate(20 80 125)" stroke="#E8A798" strokeWidth="0.5"/>
             
-            {/* Sleeves */}
-            <ellipse cx="30" cy="85" rx="8" ry="12" fill="#E91E63" transform="rotate(-15 30 85)" opacity="0.9"/>
-            <ellipse cx="70" cy="85" rx="8" ry="12" fill="#E91E63" transform="rotate(15 70 85)" opacity="0.9"/>
+            {/* Dress sleeves */}
+            <ellipse cx="28" cy="115" rx="10" ry="15" fill="#E91E63" transform="rotate(-20 28 115)" opacity="0.9"/>
+            <ellipse cx="72" cy="115" rx="10" ry="15" fill="#E91E63" transform="rotate(20 72 115)" opacity="0.9"/>
             
-            {/* Hands */}
-            <circle cx="18" cy="115" r="5" fill="#FDBCB4"/>
-            <circle cx="82" cy="115" r="5" fill="#FDBCB4"/>
+            {/* Hands with more detail */}
+            <circle cx="10" cy="150" r="6" fill="#FDBCB4" stroke="#E8A798" strokeWidth="0.5"/>
+            <circle cx="90" cy="150" r="6" fill="#FDBCB4" stroke="#E8A798" strokeWidth="0.5"/>
             
-            {/* Fingers */}
-            <ellipse cx="15" cy="113" rx="1" ry="3" fill="#FDBCB4" transform="rotate(-10 15 113)"/>
-            <ellipse cx="17" cy="111" rx="1" ry="3" fill="#FDBCB4" transform="rotate(5 17 111)"/>
-            <ellipse cx="85" cy="113" rx="1" ry="3" fill="#FDBCB4" transform="rotate(10 85 113)"/>
-            <ellipse cx="83" cy="111" rx="1" ry="3" fill="#FDBCB4" transform="rotate(-5 83 111)"/>
+            {/* Fingers - More detailed */}
+            <ellipse cx="6" cy="147" rx="1.5" ry="4" fill="#FDBCB4" transform="rotate(-15 6 147)"/>
+            <ellipse cx="8" cy="145" rx="1.5" ry="4" fill="#FDBCB4" transform="rotate(0 8 145)"/>
+            <ellipse cx="10" cy="144" rx="1.5" ry="4" fill="#FDBCB4" transform="rotate(10 10 144)"/>
+            <ellipse cx="12" cy="146" rx="1.2" ry="3" fill="#FDBCB4" transform="rotate(20 12 146)"/>
+            
+            <ellipse cx="94" cy="147" rx="1.5" ry="4" fill="#FDBCB4" transform="rotate(15 94 147)"/>
+            <ellipse cx="92" cy="145" rx="1.5" ry="4" fill="#FDBCB4" transform="rotate(0 92 145)"/>
+            <ellipse cx="90" cy="144" rx="1.5" ry="4" fill="#FDBCB4" transform="rotate(-10 90 144)"/>
+            <ellipse cx="88" cy="146" rx="1.2" ry="3" fill="#FDBCB4" transform="rotate(-20 88 146)"/>
             
             {/* Legs */}            
-            <rect x="42" y="140" width="6" height="35" fill="#FDBCB4"/>
-            <rect x="52" y="140" width="6" height="35" fill="#FDBCB4"/>
+            <rect x="40" y="185" width="8" height="45" fill="#FDBCB4" rx="3" stroke="#E8A798" strokeWidth="0.5"/>
+            <rect x="52" y="185" width="8" height="45" fill="#FDBCB4" rx="3" stroke="#E8A798" strokeWidth="0.5"/>
             
-            {/* Modern heels */}
-            <ellipse cx="45" cy="180" rx="7" ry="4" fill="#C2185B"/>
-            <ellipse cx="55" cy="180" rx="7" ry="4" fill="#C2185B"/>
-            <rect x="43" y="176" width="4" height="8" fill="#C2185B"/>
-            <rect x="53" y="176" width="4" height="8" fill="#C2185B"/>
+            {/* High heels - More detailed */}
+            <ellipse cx="44" cy="235" rx="9" ry="5" fill="#C2185B"/>
+            <ellipse cx="56" cy="235" rx="9" ry="5" fill="#C2185B"/>
+            <rect x="41" y="230" width="6" height="10" fill="#C2185B" rx="1"/>
+            <rect x="53" y="230" width="6" height="10" fill="#C2185B" rx="1"/>
             
-            {/* Accessories - Earrings */}
-            <circle cx="32" cy="55" r="2" fill="#FFD700"/>
-            <circle cx="68" cy="55" r="2" fill="#FFD700"/>
+            {/* Heel details */}
+            <rect x="43" y="235" width="2" height="8" fill="#9C1458"/>
+            <rect x="55" y="235" width="2" height="8" fill="#9C1458"/>
+            
+            {/* Accessories */}
+            <circle cx="28" cy="65" r="2.5" fill="#FFD700" stroke="#DAA520" strokeWidth="0.5"/>
+            <circle cx="72" cy="65" r="2.5" fill="#FFD700" stroke="#DAA520" strokeWidth="0.5"/>
             
             {/* Necklace */}
-            <path d="M38 75 Q50 78, 62 75" stroke="#FFD700" strokeWidth="2" fill="none"/>
-            <circle cx="50" cy="76" r="2" fill="#FFD700"/>
-          </g>
-          
-          {/* Floating elements */}
-          <g className="animate-float">
-            <circle cx="150" cy="70" r="2" fill="#E91E63" opacity="0.6"/>
-            <circle cx="160" cy="90" r="1.5" fill="#FFD700" opacity="0.6"/>
-            <circle cx="145" cy="110" r="3" fill="#F48FB1" opacity="0.6"/>
+            <path d="M35 100 Q50 105, 65 100" stroke="#FFD700" strokeWidth="3" fill="none"/>
+            <circle cx="50" cy="103" r="3" fill="#FFD700" stroke="#DAA520" strokeWidth="0.5"/>
           </g>
         </svg>
       </div>
 
       {/* Boy Cutout - Right Side */}
       <div className="absolute right-8 bottom-0 z-10">
-        <svg width="180" height="350" viewBox="0 0 180 350" className="drop-shadow-2xl">
-          {/* Boy Figure - More realistic proportions */}
-          <g transform="translate(40, 30) scale(-1, 1)">
+        <svg width="200" height="400" viewBox="0 0 200 400" className="drop-shadow-2xl">
+          {/* Boy Figure - Realistic proportions */}
+          <g transform="translate(50, 40)">
             {/* Hair - Short modern style */}
-            <path d="M50 30 C30 20, 25 40, 28 50 C25 60, 32 70, 45 68 C50 70, 55 68, 60 65 C70 62, 75 50, 72 40 C75 30, 65 20, 50 30 Z" 
-                  fill="#2C1810" opacity="0.95"/>
-            <path d="M35 42 C30 45, 32 52, 38 53 C42 54, 45 50, 43 46 C41 43, 38 42, 35 42 Z" 
-                  fill="#2C1810" opacity="0.9"/>
+            <path d="M50 25 C25 15, 20 35, 25 55 C20 70, 28 85, 45 82 C50 85, 55 82, 60 78 C75 75, 80 60, 75 45 C80 25, 70 15, 50 25 Z" 
+                  fill="#2C1810" stroke="#1A0E08" strokeWidth="1"/>
             
-            {/* Face - More realistic shape */}
-            <ellipse cx="50" cy="55" rx="18" ry="22" fill="#FDBCB4"/>
+            {/* Hair texture */}
+            <path d="M30 48 C25 52, 28 62, 35 64 C40 66, 45 61, 42 55 C40 50, 35 48, 30 48 Z" 
+                  fill="#3E2723" opacity="0.8"/>
             
-            {/* Eyebrows - Thicker for masculine look */}
-            <path d="M40 48 C43 46, 47 46, 50 48" stroke="#2C1810" strokeWidth="2" fill="none"/>
-            <path d="M50 48 C53 46, 57 46, 60 48" stroke="#2C1810" strokeWidth="2" fill="none"/>
+            {/* Face - More realistic masculine features */}
+            <ellipse cx="50" cy="65" rx="23" ry="28" fill="#FDBCB4" stroke="#E8A798" strokeWidth="0.5"/>
             
-            {/* Eyes - More angular */}
-            <ellipse cx="43" cy="52" rx="4" ry="3" fill="white"/>
-            <ellipse cx="57" cy="52" rx="4" ry="3" fill="white"/>
-            <circle cx="43" cy="52" r="2.5" fill="#4A4A4A"/>
-            <circle cx="57" cy="52" r="2.5" fill="#4A4A4A"/>
-            <circle cx="42" cy="51" r="0.8" fill="white"/>
-            <circle cx="56" cy="51" r="0.8" fill="white"/>
+            {/* Face structure - jawline shadow */}
+            <path d="M30 85 Q50 90, 70 85" stroke="#E8A798" strokeWidth="2" fill="none" opacity="0.3"/>
             
-            {/* Nose - More defined masculine */}
-            <path d="M50 58 C49 60, 51 60, 50 58" fill="#E8A798"/>
-            <ellipse cx="49" cy="59" rx="0.5" ry="1" fill="#D49B8C" opacity="0.6"/>
-            <ellipse cx="51" cy="59" rx="0.5" ry="1" fill="#D49B8C" opacity="0.6"/>
+            {/* Eyebrows - Thicker masculine */}
+            <path d="M37 55 C42 52, 48 52, 52 55" stroke="#2C1810" strokeWidth="3" fill="none"/>
+            <path d="M48 55 C52 52, 58 52, 63 55" stroke="#2C1810" strokeWidth="3" fill="none"/>
             
-            {/* Lips - Thinner for masculine look */}
-            <path d="M47 65 Q50 66, 53 65" stroke="#C2185B" strokeWidth="1.5" fill="none"/>
+            {/* Eyes - More angular masculine */}
+            <ellipse cx="42" cy="62" rx="5" ry="4" fill="white" stroke="#DDD" strokeWidth="0.5"/>
+            <ellipse cx="58" cy="62" rx="5" ry="4" fill="white" stroke="#DDD" strokeWidth="0.5"/>
+            <circle cx="42" cy="62" r="3" fill="#1565C0"/>
+            <circle cx="58" cy="62" r="3" fill="#1565C0"/>
+            <circle cx="41" cy="61" r="1" fill="white"/>
+            <circle cx="57" cy="61" r="1" fill="white"/>
             
-            {/* Body - Modern shirt */}
-            <rect x="32" y="76" width="36" height="64" rx="4" fill="#1976D2"/>
-            <rect x="34" y="78" width="32" height="60" rx="3" fill="#42A5F5" opacity="0.8"/>
+            {/* Nose - More prominent masculine */}
+            <path d="M50 70 C47 74, 53 74, 50 70" fill="#E8A798" stroke="#D49B8C" strokeWidth="0.5"/>
+            <ellipse cx="48.5" cy="72" rx="1" ry="2" fill="#D49B8C" opacity="0.7"/>
+            <ellipse cx="51.5" cy="72" rx="1" ry="2" fill="#D49B8C" opacity="0.7"/>
             
-            {/* Shirt collar */}
-            <path d="M45 76 L50 82 L55 76 L58 78 L50 86 L42 78 Z" fill="#1565C0"/>
+            {/* Lips - Thinner masculine */}
+            <path d="M46 80 Q50 82, 54 80" stroke="#9C1458" strokeWidth="2" fill="none"/>
+            
+            {/* Neck - Broader */}
+            <rect x="42" y="93" width="16" height="18" fill="#FDBCB4" rx="4"/>
+            
+            {/* Body - Modern shirt and vest */}
+            <rect x="25" y="111" width="50" height="80" rx="6" fill="#1976D2" stroke="#1565C0" strokeWidth="1"/>
+            <rect x="28" y="114" width="44" height="74" rx="4" fill="#42A5F5" opacity="0.7"/>
+            
+            {/* Vest */}
+            <path d="M35 111 L35 140 L40 155 L60 155 L65 140 L65 111 L55 115 L50 120 L45 115 Z" 
+                  fill="#263238" stroke="#37474F" strokeWidth="1"/>
+            
+            {/* Shirt collar and tie */}
+            <path d="M42 111 L50 120 L58 111 L60 115 L50 125 L40 115 Z" fill="#FFFFFF"/>
+            <path d="M48 120 L50 140 L52 120 Z" fill="#D32F2F"/>
             
             {/* Arms - More muscular */}
-            <ellipse cx="25" cy="95" rx="7" ry="22" fill="#FDBCB4" transform="rotate(-15 25 95)"/>
-            <ellipse cx="75" cy="95" rx="7" ry="22" fill="#FDBCB4" transform="rotate(15 75 95)"/>
+            <ellipse cx="15" cy="135" rx="9" ry="28" fill="#FDBCB4" transform="rotate(-15 15 135)" stroke="#E8A798" strokeWidth="0.5"/>
+            <ellipse cx="85" cy="135" rx="9" ry="28" fill="#FDBCB4" transform="rotate(15 85 135)" stroke="#E8A798" strokeWidth="0.5"/>
             
             {/* Shirt sleeves */}
-            <ellipse cx="30" cy="85" rx="9" ry="14" fill="#1976D2" transform="rotate(-15 30 85)" opacity="0.9"/>
-            <ellipse cx="70" cy="85" rx="9" ry="14" fill="#1976D2" transform="rotate(15 70 85)" opacity="0.9"/>
+            <ellipse cx="25" cy="125" rx="11" ry="18" fill="#1976D2" transform="rotate(-15 25 125)" opacity="0.9"/>
+            <ellipse cx="75" cy="125" rx="11" ry="18" fill="#1976D2" transform="rotate(15 75 125)" opacity="0.9"/>
             
-            {/* Hands */}
-            <circle cx="18" cy="117" r="5" fill="#FDBCB4"/>
-            <circle cx="82" cy="117" r="5" fill="#FDBCB4"/>
+            {/* Hands - More detailed */}
+            <circle cx="5" cy="163" r="7" fill="#FDBCB4" stroke="#E8A798" strokeWidth="0.5"/>
+            <circle cx="95" cy="163" r="7" fill="#FDBCB4" stroke="#E8A798" strokeWidth="0.5"/>
             
-            {/* Fingers */}
-            <ellipse cx="15" cy="115" rx="1" ry="3" fill="#FDBCB4" transform="rotate(-10 15 115)"/>
-            <ellipse cx="17" cy="113" rx="1" ry="3" fill="#FDBCB4" transform="rotate(5 17 113)"/>
-            <ellipse cx="85" cy="115" rx="1" ry="3" fill="#FDBCB4" transform="rotate(10 85 115)"/>
-            <ellipse cx="83" cy="113" rx="1" ry="3" fill="#FDBCB4" transform="rotate(-5 83 113)"/>
+            {/* Fingers - More realistic */}
+            <ellipse cx="1" cy="160" rx="1.5" ry="4" fill="#FDBCB4" transform="rotate(-20 1 160)"/>
+            <ellipse cx="3" cy="158" rx="1.5" ry="4" fill="#FDBCB4" transform="rotate(-5 3 158)"/>
+            <ellipse cx="5" cy="157" rx="1.5" ry="4" fill="#FDBCB4" transform="rotate(5 5 157)"/>
+            <ellipse cx="7" cy="159" rx="1.2" ry="3" fill="#FDBCB4" transform="rotate(15 7 159)"/>
             
-            {/* Legs - Jeans */}
-            <rect x="42" y="140" width="7" height="35" fill="#1A237E"/>
-            <rect x="51" y="140" width="7" height="35" fill="#1A237E"/>
+            <ellipse cx="99" cy="160" rx="1.5" ry="4" fill="#FDBCB4" transform="rotate(20 99 160)"/>
+            <ellipse cx="97" cy="158" rx="1.5" ry="4" fill="#FDBCB4" transform="rotate(5 97 158)"/>
+            <ellipse cx="95" cy="157" rx="1.5" ry="4" fill="#FDBCB4" transform="rotate(-5 95 157)"/>
+            <ellipse cx="93" cy="159" rx="1.2" ry="3" fill="#FDBCB4" transform="rotate(-15 93 159)"/>
             
-            {/* Jeans details */}
-            <line x1="45" y1="145" x2="45" y2="170" stroke="#303F9F" strokeWidth="0.5"/>
-            <line x1="54" y1="145" x2="54" y2="170" stroke="#303F9F" strokeWidth="0.5"/>
+            {/* Legs - Dress pants */}
+            <rect x="38" y="191" width="10" height="48" fill="#263238" rx="3" stroke="#37474F" strokeWidth="0.5"/>
+            <rect x="52" y="191" width="10" height="48" fill="#263238" rx="3" stroke="#37474F" strokeWidth="0.5"/>
             
-            {/* Modern sneakers */}
-            <ellipse cx="45" cy="180" rx="8" ry="4" fill="#FF5722"/>
-            <ellipse cx="55" cy="180" rx="8" ry="4" fill="#FF5722"/>
-            <ellipse cx="45" cy="178" rx="6" ry="2" fill="#FF7043"/>
-            <ellipse cx="55" cy="178" rx="6" ry="2" fill="#FF7043"/>
+            {/* Pants details - creases */}
+            <line x1="43" y1="195" x2="43" y2="235" stroke="#37474F" strokeWidth="1"/>
+            <line x1="57" y1="195" x2="57" y2="235" stroke="#37474F" strokeWidth="1"/>
+            
+            {/* Dress shoes */}
+            <ellipse cx="43" cy="244" rx="10" ry="5" fill="#1A0E08"/>
+            <ellipse cx="57" cy="244" rx="10" ry="5" fill="#1A0E08"/>
+            <ellipse cx="43" cy="242" rx="8" ry="3" fill="#2C1810"/>
+            <ellipse cx="57" cy="242" rx="8" ry="3" fill="#2C1810"/>
+            
+            {/* Shoe laces */}
+            <ellipse cx="43" cy="241" rx="3" ry="1" fill="#1A0E08"/>
+            <ellipse cx="57" cy="241" rx="3" ry="1" fill="#1A0E08"/>
             
             {/* Watch */}
-            <rect x="16" y="114" width="4" height="6" rx="2" fill="#424242"/>
-            <circle cx="18" cy="117" r="1.5" fill="#FFD700"/>
+            <rect x="3" y="160" width="6" height="8" rx="3" fill="#424242" stroke="#616161" strokeWidth="0.5"/>
+            <circle cx="6" cy="164" r="2" fill="#FFD700" stroke="#DAA520" strokeWidth="0.5"/>
           </g>
           
-          {/* Floating elements */}
+          {/* Floating romantic elements */}
           <g className="animate-float" style={{animationDelay: '1s'}}>
-            <circle cx="30" cy="70" r="2" fill="#1976D2" opacity="0.6"/>
-            <circle cx="20" cy="90" r="1.5" fill="#FF5722" opacity="0.6"/>
-            <circle cx="35" cy="110" r="3" fill="#42A5F5" opacity="0.6"/>
+            <circle cx="30" cy="80" r="2" fill="#FF69B4" opacity="0.6"/>
+            <circle cx="20" cy="100" r="1.5" fill="#FFD700" opacity="0.6"/>
+            <circle cx="35" cy="120" r="3" fill="#E91E63" opacity="0.6"/>
           </g>
         </svg>
       </div>
