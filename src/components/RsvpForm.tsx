@@ -85,7 +85,7 @@ const RsvpForm = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center">
           <div className="flex items-center justify-center gap-2 text-wedding-mauve">
             <Calendar className="w-4 h-4" />
-            <span className="text-sm font-medium">December 15, 2025</span>
+            <span className="text-sm font-medium">April 20, 2026</span>
           </div>
           <div className="flex items-center justify-center gap-2 text-wedding-mauve">
             <Clock className="w-4 h-4" />
@@ -93,7 +93,7 @@ const RsvpForm = () => {
           </div>
           <div className="flex items-center justify-center gap-2 text-wedding-mauve sm:col-span-2">
             <MapPin className="w-4 h-4" />
-            <span className="text-sm font-medium">Grand Ballroom, Mumbai</span>
+            <span className="text-sm font-medium">Hotel Royal Bistro, Mehsana</span>
           </div>
         </div>
       </div>
