@@ -214,7 +214,7 @@ const FunctionThemes = () => {
             </div>
 
             <h3 className="text-3xl font-cormorant font-bold text-wedding-mauve mb-6 animate-float-slow">
-              Fashion Police Alert! 👮‍♀️💅
+              Fashion Police Alert! 
             </h3>
             
             <div className="space-y-4 text-gray-700 leading-relaxed max-w-3xl mx-auto">
@@ -226,19 +226,19 @@ const FunctionThemes = () => {
               <p>
                 Think of these colors as your <strong className="text-wedding-mauve">style superhero cape</strong> – 
                 they'll help you blend in with our rainbow of love while still looking absolutely fabulous! 
-                But honestly, if you show up in a potato sack, we'll still be thrilled you're there! 🥔✨
+                But honestly, if you show up in a potato sack, we'll still be thrilled you're there! ✨
               </p>
               
               <p className="italic text-wedding-gold font-medium">
                 Remember: The only mandatory accessory is your beautiful smile! 
-                (And maybe some comfortable dancing shoes because we're going to party! 💃🕺)
+                (And maybe some comfortable dancing shoes because we're going to party! )
               </p>
               
               <div className="bg-wedding-cream/50 rounded-2xl p-6 mt-8 border border-wedding-gold/30">
                 <p className="text-sm text-gray-600">
                   <span className="font-bold text-wedding-mauve">Pro tip:</span> 
                   If you're still confused about what to wear, just imagine you're attending the wedding of two people who really, 
-                  <em>really</em> love color-coordinated photos! 📸💖
+                  <em>really</em> love color-coordinated photos! 
                 </p>
               </div>
             </div>
