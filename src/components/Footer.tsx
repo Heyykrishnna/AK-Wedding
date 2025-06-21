@@ -1,4 +1,4 @@
-import { Heart, MapPin, Calendar, Mail, Phone, Instagram, Whatsapp, Twitter } from 'lucide-react';
+import { Heart, MapPin, Calendar, Mail, Phone, Instagram, MessageCircle, Twitter } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const Footer: React.FC = () => {
@@ -158,7 +158,7 @@ const Footer: React.FC = () => {
             <div className="flex space-x-4">
               {[
                 { Icon: Instagram, href: "#", delay: "0ms" },
-                { Icon: Whatsapp, href: "#", delay: "100ms" },
+                { Icon: MessageCircle, href: "#", delay: "100ms" },
                 { Icon: Twitter, href: "#", delay: "200ms" }
               ].map(({ Icon, href, delay }, index) => (
                 <a
