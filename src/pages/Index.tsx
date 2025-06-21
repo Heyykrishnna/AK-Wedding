@@ -7,10 +7,12 @@ import RsvpSection from '@/components/RsvpSection';
 import FunctionThemes from '@/components/FunctionThemes';
 import Gallery from '@/components/Gallery';
 import Footer from '@/components/Footer';
+import CustomCursor from '@/components/CustomCursor';
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <CustomCursor />
       <Header />
       <HeroSection />
       <OurStory />
