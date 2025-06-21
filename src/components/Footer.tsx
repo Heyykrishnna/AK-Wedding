@@ -127,14 +127,14 @@ const Footer: React.FC = () => {
                 <Calendar className="w-5 h-5 text-wedding-gold mt-1 group-hover:animate-pulse" />
                 <div>
                   <p className="font-montserrat text-sm text-white/90 font-medium">Wedding Date</p>
-                  <p className="font-montserrat text-xs text-white/70">December 2024</p>
+                  <p className="font-montserrat text-xs text-white/70">20 Appril 2026</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3 group hover:scale-105 transition-transform duration-300">
                 <MapPin className="w-5 h-5 text-wedding-gold mt-1 group-hover:animate-pulse" />
                 <div>
                   <p className="font-montserrat text-sm text-white/90 font-medium">Celebration Venue</p>
-                  <p className="font-montserrat text-xs text-white/70">Beautiful Wedding Destination</p>
+                  <p className="font-montserrat text-xs text-white/70">Hotel Royal Bistro, Mehsana</p>
                 </div>
               </div>
             </div>
@@ -157,9 +157,9 @@ const Footer: React.FC = () => {
             {/* Social Media Icons */}
             <div className="flex space-x-4">
               {[
-                { Icon: Instagram, href: "#", delay: "0ms" },
+                { Icon: Instagram, href: "https://instagram.com/heyy_krishnna/", delay: "0ms" },
                 { Icon: MessageCircle, href: "#", delay: "100ms" },
-                { Icon: Twitter, href: "#", delay: "200ms" }
+                { Icon: Twitter, href: "x.com/hey_krishnna", delay: "200ms" }
               ].map(({ Icon, href, delay }, index) => (
                 <a
                   key={index}
