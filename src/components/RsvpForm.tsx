@@ -52,8 +52,8 @@ const RsvpForm = () => {
       // Handle duplicate RSVP case
       if (error.message === 'DUPLICATE_RSVP') {
         toast({
-          title: "RSVP Already Submitted",
-          description: "You have already submitted your RSVP. We're excited to celebrate with you!",
+          title: "Already Registered",
+          description: "You have already marked your presence through your name or email ID. If you want to edit your response, please contact the family for assistance.",
           variant: "destructive",
         });
       } else {
