@@ -159,7 +159,7 @@ const Footer: React.FC = () => {
               {[
                 { Icon: Instagram, href: "https://instagram.com/heyy_krishnna/", delay: "0ms" },
                 { Icon: MessageCircle, href: "#", delay: "100ms" },
-                { Icon: Twitter, href: "x.com/hey_krishnna", delay: "200ms" }
+                { Icon: Twitter, href: "https://x.com/hey_krishnna", delay: "200ms" }
               ].map(({ Icon, href, delay }, index) => (
                 <a
                   key={index}
