@@ -89,7 +89,7 @@
     @apply font-cormorant;
   }
 
-  /* Custom cursor */
+  /* Custom cursor styles */
   .custom-cursor {
     position: fixed;
     top: 0;
@@ -129,7 +129,7 @@
       0 0 35px rgba(212, 175, 55, 0.4);
   }
 
-  /* Hide cursor on interactive elements */
+  /* Hide default cursor on interactive elements */
   a, button, input, textarea, select, .clickable {
     cursor: none !important;
   }

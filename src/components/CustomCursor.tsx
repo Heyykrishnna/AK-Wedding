@@ -24,7 +24,7 @@ const CustomCursor = () => {
       element.addEventListener('mouseleave', handleMouseLeave);
     });
 
-    // Cleanup
+    // Cleanup function
     return () => {
       document.removeEventListener('mousemove', updatePosition);
       interactiveElements.forEach(element => {
