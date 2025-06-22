@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import Countdown from './Countdown';
 import AudioPlayer from './AudioPlayer';
 import { defaultMusic } from '@/lib/backgroundMusic';
-import { Flower } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -151,9 +150,11 @@ const HeroSection: React.FC = () => {
         }}
       >
         <div className="animate-fade-in">
-          <h2 className="font-montserrat text-sm md:text-base uppercase tracking-[0.3em] text-white mb-4"><b>We're Getting Married</b></h2>
+          <h2 className="font-montserrat text-sm md:text-base uppercase tracking-[0.3em] text-white mb-4">
+            <span className="font-bold">We're Getting Married</span>
+          </h2>
           <h1 className="font-cormorant text-5xl md:text-7xl lg:text-8xl text-wedding-cream font-light mb-6">
-            <b>Akansha</b> <span className="font-cormorant italic text-wedding-gold">&</span> <b>Kush</b>
+            <span className="font-bold">Akansha</span> <span className="font-cormorant italic text-wedding-gold">&</span> <span className="font-bold">Kush</span>
           </h1>
 
           <div className="w-24 h-px bg-wedding-gold mx-auto my-8"></div>
