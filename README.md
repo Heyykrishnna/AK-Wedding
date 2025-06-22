@@ -59,12 +59,6 @@ src/
 └── main.tsx          # Entry point
 ```
 
-## 📸 Screenshots
-
-> *(Optional: Add screenshots or animated previews here to showcase the website.)*
-
----
-
 ## 🌐 Deployment
 
 This site can be deployed using platforms like **Vercel**, **Netlify**, or **GitHub Pages**.
