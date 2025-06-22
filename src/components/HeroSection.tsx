@@ -15,133 +15,129 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-floral">
-      {/* Parallax overlay that moves with scroll */}
+    <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-br from-red-900 via-pink-800 to-orange-900">
+      {/* Rich Indian pattern overlay */}
+      <div className="absolute inset-0 bg-indian-pattern opacity-20 pointer-events-none" />
+      
+      {/* Gradient overlay with rich colors */}
       <div 
-        className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-wedding-mauve/60 to-gray-800/70 pointer-events-none transition-all duration-300"
+        className="absolute inset-0 bg-gradient-to-b from-red-900/90 via-pink-800/70 to-orange-800/80 pointer-events-none transition-all duration-300"
         style={{
           transform: `translateY(${scrollY * 0.2}px)`,
-          opacity: 1 - scrollY / 1000,
+          opacity: 1 - scrollY / 1200,
         }}
       />
       
-      {/* Enhanced Indian wedding flowers decoration with parallax effect */}
+      {/* Enhanced decorative elements with traditional Indian motifs */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Top left corner flower with parallax */}
+        {/* Top left mandala design */}
         <div 
-          className="absolute top-8 left-8 text-wedding-gold/40 z-20 transition-all duration-300"
+          className="absolute top-8 left-8 text-yellow-400/60 z-20 transition-all duration-300"
           style={{
             transform: `translate(${scrollY * 0.1}px, ${scrollY * 0.15}px) rotate(${scrollY * 0.05}deg)`,
           }}
         >
-          <svg width="80" height="120" viewBox="0 0 80 120" fill="currentColor" className="drop-shadow-lg">
-            <path d="M40 120 Q38 100 36 80 Q34 60 32 40" stroke="currentColor" strokeWidth="3" fill="none" opacity="0.6"/>
-            <ellipse cx="25" cy="70" rx="8" ry="15" transform="rotate(-30 25 70)" opacity="0.5"/>
-            <ellipse cx="55" cy="60" rx="6" ry="12" transform="rotate(45 55 60)" opacity="0.5"/>
-            <g transform="translate(40, 30)">
-              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(0)" opacity="0.8"/>
-              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(45)" opacity="0.7"/>
-              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(90)" opacity="0.8"/>
-              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(135)" opacity="0.7"/>
-              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(180)" opacity="0.8"/>
-              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(225)" opacity="0.7"/>
-              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(270)" opacity="0.8"/>
-              <ellipse cx="0" cy="-15" rx="8" ry="20" transform="rotate(315)" opacity="0.7"/>
-              <circle cx="0" cy="-15" r="4" opacity="0.9"/>
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="currentColor" className="drop-shadow-2xl">
+            {/* Mandala center */}
+            <circle cx="60" cy="60" r="8" fill="#FFD700" opacity="0.9"/>
+            {/* Inner ring */}
+            <g transform="translate(60, 60)">
+              {[...Array(8)].map((_, i) => (
+                <g key={i} transform={`rotate(${i * 45})`}>
+                  <ellipse cx="0" cy="-20" rx="4" ry="12" fill="#FF6B6B" opacity="0.8"/>
+                  <ellipse cx="0" cy="-20" rx="2" ry="8" fill="#FFD700" opacity="0.9"/>
+                </g>
+              ))}
+            </g>
+            {/* Outer ring */}
+            <g transform="translate(60, 60)">
+              {[...Array(16)].map((_, i) => (
+                <g key={i} transform={`rotate(${i * 22.5})`}>
+                  <ellipse cx="0" cy="-35" rx="3" ry="8" fill="#FF8E53" opacity="0.7"/>
+                </g>
+              ))}
+            </g>
+            {/* Decorative petals */}
+            <g transform="translate(60, 60)">
+              {[...Array(12)].map((_, i) => (
+                <g key={i} transform={`rotate(${i * 30})`}>
+                  <path d="M0,-45 Q5,-50 0,-55 Q-5,-50 0,-45" fill="#FFD700" opacity="0.6"/>
+                </g>
+              ))}
             </g>
           </svg>
         </div>
         
-        {/* Top right corner flower with opposite parallax */}
+        {/* Top right paisley pattern */}
         <div 
-          className="absolute top-8 right-8 text-wedding-gold/35 z-20 transition-all duration-300"
+          className="absolute top-8 right-8 text-pink-400/50 z-20 transition-all duration-300"
           style={{
             transform: `translate(${-scrollY * 0.08}px, ${scrollY * 0.12}px) rotate(${-scrollY * 0.03}deg)`,
           }}
         >
-          <svg width="70" height="100" viewBox="0 0 70 100" fill="currentColor" className="drop-shadow-lg">
-            <path d="M35 100 Q37 85 39 70 Q41 55 43 40" stroke="currentColor" strokeWidth="2.5" fill="none" opacity="0.6"/>
-            <ellipse cx="50" cy="65" rx="6" ry="10" transform="rotate(30 50 65)" opacity="0.5"/>
-            <ellipse cx="20" cy="55" rx="5" ry="8" transform="rotate(-45 20 55)" opacity="0.5"/>
-            <g transform="translate(35, 25)">
-              <ellipse cx="0" cy="-12" rx="6" ry="16" transform="rotate(0)" opacity="0.8"/>
-              <ellipse cx="0" cy="-12" rx="6" ry="16" transform="rotate(60)" opacity="0.7"/>
-              <ellipse cx="0" cy="-12" rx="6" ry="16" transform="rotate(120)" opacity="0.8"/>
-              <ellipse cx="0" cy="-12" rx="6" ry="16" transform="rotate(180)" opacity="0.7"/>
-              <ellipse cx="0" cy="-12" rx="6" ry="16" transform="rotate(240)" opacity="0.8"/>
-              <ellipse cx="0" cy="-12" rx="6" ry="16" transform="rotate(300)" opacity="0.7"/>
-              <circle cx="0" cy="-12" r="3" opacity="0.9"/>
-            </g>
+          <svg width="100" height="140" viewBox="0 0 100 140" fill="currentColor" className="drop-shadow-xl">
+            <path d="M50 10 Q70 20 80 50 Q85 80 70 100 Q50 120 40 100 Q30 80 35 60 Q40 40 45 30 Q48 20 50 10 Z" fill="#FF6B6B" opacity="0.8"/>
+            <path d="M50 15 Q65 25 72 50 Q75 75 65 90 Q50 105 45 90 Q40 75 43 60 Q46 40 48 30 Q49 22 50 15 Z" fill="#FFD700" opacity="0.7"/>
+            <circle cx="55" cy="45" r="3" fill="#FF8E53" opacity="0.9"/>
+            <circle cx="50" cy="60" r="2" fill="#FFD700" opacity="0.8"/>
+            <circle cx="58" cy="75" r="2.5" fill="#FF6B6B" opacity="0.7"/>
           </svg>
         </div>
-        
-        {/* Bottom flowers with scroll-based movement */}
+
+        {/* Bottom decorative elements */}
         <div 
-          className="absolute bottom-32 left-16 text-wedding-gold/30 z-20 transition-all duration-300"
+          className="absolute bottom-20 left-12 text-orange-400/40 z-20 transition-all duration-300"
           style={{
             transform: `translate(${scrollY * 0.05}px, ${-scrollY * 0.1}px) scale(${1 + scrollY * 0.0002})`,
           }}
         >
-          <svg width="60" height="80" viewBox="0 0 60 80" fill="currentColor" className="drop-shadow-md">
-            <path d="M30 80 Q28 65 26 50" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.6"/>
-            <ellipse cx="20" cy="60" rx="4" ry="8" transform="rotate(-20 20 60)" opacity="0.5"/>
-            <ellipse cx="40" cy="55" rx="3" ry="6" transform="rotate(25 40 55)" opacity="0.5"/>
-            <g transform="translate(30, 20)">
-              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(0)" opacity="0.8"/>
-              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(72)" opacity="0.7"/>
-              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(144)" opacity="0.8"/>
-              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(216)" opacity="0.7"/>
-              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(288)" opacity="0.8"/>
-              <circle cx="0" cy="-10" r="2.5" opacity="0.9"/>
+          <svg width="80" height="100" viewBox="0 0 80 100" fill="currentColor" className="drop-shadow-lg">
+            <g transform="translate(40, 50)">
+              {[...Array(6)].map((_, i) => (
+                <g key={i} transform={`rotate(${i * 60})`}>
+                  <ellipse cx="0" cy="-25" rx="8" ry="20" fill="#FFD700" opacity="0.6"/>
+                  <ellipse cx="0" cy="-25" rx="4" ry="15" fill="#FF6B6B" opacity="0.7"/>
+                </g>
+              ))}
+              <circle cx="0" cy="0" r="6" fill="#FF8E53" opacity="0.9"/>
             </g>
           </svg>
         </div>
         
         <div 
-          className="absolute bottom-32 right-16 text-wedding-gold/30 z-20 transition-all duration-300"
+          className="absolute bottom-20 right-12 text-red-400/40 z-20 transition-all duration-300"
           style={{
             transform: `translate(${-scrollY * 0.07}px, ${-scrollY * 0.08}px) scale(${1 + scrollY * 0.0003})`,
           }}
         >
-          <svg width="60" height="80" viewBox="0 0 60 80" fill="currentColor" className="drop-shadow-md">
-            <path d="M30 80 Q32 65 34 50" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.6"/>
-            <ellipse cx="40" cy="60" rx="4" ry="8" transform="rotate(20 40 60)" opacity="0.5"/>
-            <ellipse cx="20" cy="55" rx="3" ry="6" transform="rotate(-25 20 55)" opacity="0.5"/>
-            <g transform="translate(30, 20)">
-              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(0)" opacity="0.8"/>
-              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(72)" opacity="0.7"/>
-              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(144)" opacity="0.8"/>
-              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(216)" opacity="0.7"/>
-              <ellipse cx="0" cy="-10" rx="5" ry="12" transform="rotate(288)" opacity="0.8"/>
-              <circle cx="0" cy="-10" r="2.5" opacity="0.9"/>
+          <svg width="80" height="100" viewBox="0 0 80 100" fill="currentColor" className="drop-shadow-lg">
+            <g transform="translate(40, 50)">
+              {[...Array(8)].map((_, i) => (
+                <g key={i} transform={`rotate(${i * 45})`}>
+                  <ellipse cx="0" cy="-20" rx="6" ry="15" fill="#FF6B6B" opacity="0.6"/>
+                </g>
+              ))}
+              <circle cx="0" cy="0" r="5" fill="#FFD700" opacity="0.8"/>
             </g>
           </svg>
         </div>
 
-        {/* Floating particles that respond to scroll */}
-        <div 
-          className="absolute top-1/4 left-1/4 w-2 h-2 bg-wedding-gold/20 rounded-full transition-all duration-500"
-          style={{
-            transform: `translate(${scrollY * 0.3}px, ${scrollY * 0.2}px)`,
-            opacity: Math.max(0.2, 1 - scrollY / 800),
-          }}
-        />
-        <div 
-          className="absolute top-1/3 right-1/3 w-3 h-3 bg-wedding-cream/15 rounded-full transition-all duration-700"
-          style={{
-            transform: `translate(${-scrollY * 0.25}px, ${scrollY * 0.35}px)`,
-            opacity: Math.max(0.15, 1 - scrollY / 600),
-          }}
-        />
-        <div 
-          className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-wedding-mauve/25 rounded-full transition-all duration-600"
-          style={{
-            transform: `translate(${scrollY * 0.4}px, ${-scrollY * 0.15}px)`,
-            opacity: Math.max(0.25, 1 - scrollY / 700),
-          }}
-        />
+        {/* Floating golden particles */}
+        {[...Array(12)].map((_, i) => (
+          <div 
+            key={i}
+            className={`absolute w-${2 + (i % 3)} h-${2 + (i % 3)} bg-yellow-400/30 rounded-full transition-all duration-${500 + i * 100}`}
+            style={{
+              top: `${20 + (i * 7)}%`,
+              left: `${10 + (i * 8)}%`,
+              transform: `translate(${scrollY * (0.2 + i * 0.05)}px, ${scrollY * (0.1 + i * 0.03)}px)`,
+              opacity: Math.max(0.2, 1 - scrollY / (600 + i * 50)),
+            }}
+          />
+        ))}
       </div>
       
+      {/* Main content with enhanced styling */}
       <div 
         className="container px-4 py-24 md:py-32 z-30 text-center transition-all duration-300"
         style={{
@@ -150,45 +146,85 @@ const HeroSection: React.FC = () => {
         }}
       >
         <div className="animate-fade-in">
-          <h2 className="font-montserrat text-sm md:text-base uppercase tracking-[0.3em] text-white mb-4">
-            <span className="font-bold">We're Getting Married</span>
-          </h2>
-          <h1 className="font-cormorant text-5xl md:text-7xl lg:text-8xl text-wedding-cream font-light mb-6">
-            <span className="font-bold">Akansha</span> <span className="font-cormorant italic text-wedding-gold">&</span> <span className="font-bold">Kush</span>
-          </h1>
-
-          <div className="w-24 h-px bg-wedding-gold mx-auto my-8"></div>
+          {/* Enhanced header with Indian styling */}
+          <div className="relative mb-6">
+            <h2 className="font-montserrat text-sm md:text-base uppercase tracking-[0.4em] text-yellow-300 mb-4 relative">
+              <span className="relative z-10 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent font-bold">
+                We're Getting Married
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-orange-600/20 blur-lg"></div>
+            </h2>
+          </div>
           
-          <p className="font-montserrat text-lg md:text-xl text-wedding-cream max-w-xl mx-auto mb-12">
-            Join us as we celebrate our love and begin our forever together.
+          {/* Names with stunning gradient and glow effects */}
+          <div className="relative mb-8">
+            <h1 className="font-cormorant text-5xl md:text-7xl lg:text-9xl font-light mb-6 relative">
+              <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent font-bold drop-shadow-2xl">
+                Akansha
+              </span>
+              <span className="mx-4 font-cormorant italic text-yellow-400 text-6xl md:text-8xl drop-shadow-xl">
+                &
+              </span>
+              <span className="bg-gradient-to-r from-red-400 via-pink-400 to-orange-400 bg-clip-text text-transparent font-bold drop-shadow-2xl">
+                Kush
+              </span>
+            </h1>
+            {/* Glow effect behind names */}
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-600/30 via-orange-600/30 to-red-600/30 blur-3xl -z-10"></div>
+          </div>
+
+          {/* Decorative separator with Indian motif */}
+          <div className="flex items-center justify-center my-8">
+            <div className="w-16 h-px bg-gradient-to-r from-transparent to-yellow-400"></div>
+            <div className="mx-4 w-8 h-8 border-2 border-yellow-400 rounded-full flex items-center justify-center bg-red-900/50">
+              <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+            </div>
+            <div className="w-16 h-px bg-gradient-to-l from-transparent to-yellow-400"></div>
+          </div>
+          
+          <p className="font-montserrat text-lg md:text-xl text-yellow-100 max-w-2xl mx-auto mb-12 leading-relaxed">
+            Join us as we celebrate our love and begin our forever journey together in the sacred bond of marriage
           </p>
           
-          <h3 className="font-cormorant text-xl md:text-2xl text-wedding-cream italic mb-8">
-            Tentatively date of marriage
+          <h3 className="font-cormorant text-xl md:text-2xl text-orange-200 italic mb-8 font-medium">
+            Sacred Union Date
           </h3>
 
-          <div className="p-6 md:p-8 bg-gray-900/50 backdrop-blur-sm rounded-lg shadow-xl inline-block mb-8 border border-wedding-gold/30">
+          {/* Enhanced countdown with Indian styling */}
+          <div className="p-8 md:p-10 bg-gradient-to-br from-red-900/80 via-pink-900/70 to-orange-900/80 backdrop-blur-lg rounded-2xl shadow-2xl inline-block mb-8 border-2 border-yellow-400/30 relative overflow-hidden">
+            {/* Decorative corners */}
+            <div className="absolute top-2 left-2 w-6 h-6 border-l-2 border-t-2 border-yellow-400"></div>
+            <div className="absolute top-2 right-2 w-6 h-6 border-r-2 border-t-2 border-yellow-400"></div>
+            <div className="absolute bottom-2 left-2 w-6 h-6 border-l-2 border-b-2 border-yellow-400"></div>
+            <div className="absolute bottom-2 right-2 w-6 h-6 border-r-2 border-b-2 border-yellow-400"></div>
+            
             <Countdown targetDate={weddingDate} />
           </div>
           
-          <div className="mt-8">
-            <p className="font-montserrat text-md md:text-lg text-wedding-cream">
+          <div className="mt-8 p-6 bg-gradient-to-r from-yellow-900/30 to-orange-900/30 rounded-xl border border-yellow-400/20">
+            <p className="font-montserrat text-lg md:text-xl text-yellow-200 font-medium">
               April 20th, 2026 | HOTEL ROYAL BISTRO
+            </p>
+            <p className="font-cormorant text-md text-orange-300 italic mt-2">
+              Where two hearts become one
             </p>
           </div>
         </div>
       </div>
       
+      {/* Enhanced scroll indicator */}
       <div 
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float z-30 transition-all duration-300"
         style={{
           transform: `translateX(-50%) translateY(${scrollY * 0.05}px)`,
         }}
       >
-        <a href="#our-story" className="text-wedding-gold hover:text-wedding-cream transition-colors">
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+        <a href="#our-story" className="text-yellow-400 hover:text-orange-300 transition-colors group">
+          <div className="w-12 h-12 rounded-full border-2 border-yellow-400 flex items-center justify-center group-hover:border-orange-300 group-hover:bg-yellow-400/10 transition-all">
+            <svg className="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
         </a>
       </div>
       
