@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import Countdown from './Countdown';
 import AudioPlayer from './AudioPlayer';
@@ -16,14 +17,14 @@ const HeroSection: React.FC = () => {
   return (
     <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-br from-red-900 via-pink-800 to-orange-900">
       {/* Enhanced Indian pattern overlay - more visible */}
-      <div className="absolute inset-0 bg-indian-pattern opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 bg-indian-pattern opacity-50 pointer-events-none" />
       
       {/* Additional pattern layer for depth */}
-      <div className="absolute inset-0 bg-floral opacity-25 pointer-events-none" />
+      <div className="absolute inset-0 bg-floral opacity-35 pointer-events-none" />
       
       {/* Gradient overlay with rich colors - adjusted for pattern visibility */}
       <div 
-        className="absolute inset-0 bg-gradient-to-b from-red-900/70 via-pink-800/50 to-orange-800/60 pointer-events-none transition-all duration-300"
+        className="absolute inset-0 bg-gradient-to-b from-red-900/60 via-pink-800/40 to-orange-800/50 pointer-events-none transition-all duration-300"
         style={{
           transform: `translateY(${scrollY * 0.2}px)`,
           opacity: 1 - scrollY / 1200,
@@ -158,21 +159,21 @@ const HeroSection: React.FC = () => {
             </h2>
           </div>
           
-          {/* Names with stunning gradient and glow effects */}
+          {/* Names with stunning gradient and glow effects - MADE BOLD */}
           <div className="relative mb-8">
-            <h1 className="font-cormorant text-5xl md:text-7xl lg:text-9xl font-light mb-6 relative">
-              <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent font-bold drop-shadow-2xl">
+            <h1 className="font-cormorant text-5xl md:text-7xl lg:text-9xl font-bold mb-6 relative">
+              <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent font-black drop-shadow-2xl">
                 Akansha
               </span>
-              <span className="mx-4 font-cormorant italic text-yellow-400 text-6xl md:text-8xl drop-shadow-xl">
+              <span className="mx-4 font-cormorant italic text-yellow-400 text-6xl md:text-8xl drop-shadow-xl font-bold">
                 &
               </span>
-              <span className="bg-gradient-to-r from-red-400 via-pink-400 to-orange-400 bg-clip-text text-transparent font-bold drop-shadow-2xl">
+              <span className="bg-gradient-to-r from-red-400 via-pink-400 to-orange-400 bg-clip-text text-transparent font-black drop-shadow-2xl">
                 Kush
               </span>
             </h1>
-            {/* Glow effect behind names */}
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-600/30 via-orange-600/30 to-red-600/30 blur-3xl -z-10"></div>
+            {/* Enhanced glow effect behind names */}
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-600/40 via-orange-600/40 to-red-600/40 blur-3xl -z-10"></div>
           </div>
 
           {/* Decorative separator with Indian motif */}

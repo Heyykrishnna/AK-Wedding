@@ -28,20 +28,35 @@ const Header: React.FC = () => {
   return (
     <header 
       className={cn(
-        "fixed w-full py-4 z-50 transition-all duration-300",
-        scrolled ? "bg-white/90 shadow-sm backdrop-blur-md" : "bg-transparent"
+        "fixed w-full py-4 z-50 transition-all duration-500",
+        scrolled 
+          ? "bg-white/20 shadow-lg backdrop-blur-xl border-b border-white/20" 
+          : "bg-transparent"
       )}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-cormorant font-semibold text-wedding-mauve">
+          <Link 
+            to="/" 
+            className={cn(
+              "text-2xl font-cormorant font-semibold transition-all duration-300",
+              scrolled 
+                ? "text-white drop-shadow-lg" 
+                : "text-wedding-mauve"
+            )}
+          >
             A&K
           </Link>
 
           {/* Mobile menu button */}
           <button 
             onClick={toggleMenu} 
-            className="md:hidden text-wedding-mauve focus:outline-none"
+            className={cn(
+              "md:hidden focus:outline-none transition-all duration-300",
+              scrolled 
+                ? "text-white drop-shadow-lg" 
+                : "text-wedding-mauve"
+            )}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
@@ -50,22 +65,134 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-10">
-            <a href="#home" className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">Home</a>
-            <a href="#our-story" className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">Our Story</a>
-            <a href="#details" className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">Details</a>
-            <a href="#rsvp" className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">RSVP</a>
-            <a href="#gallery" className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">Gallery</a>
+            <a 
+              href="#home" 
+              className={cn(
+                "transition-all duration-300 hover:scale-105",
+                scrolled 
+                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  : "text-gray-600 hover:text-wedding-mauve"
+              )}
+            >
+              Home
+            </a>
+            <a 
+              href="#our-story" 
+              className={cn(
+                "transition-all duration-300 hover:scale-105",
+                scrolled 
+                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  : "text-gray-600 hover:text-wedding-mauve"
+              )}
+            >
+              Our Story
+            </a>
+            <a 
+              href="#details" 
+              className={cn(
+                "transition-all duration-300 hover:scale-105",
+                scrolled 
+                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  : "text-gray-600 hover:text-wedding-mauve"
+              )}
+            >
+              Details
+            </a>
+            <a 
+              href="#rsvp" 
+              className={cn(
+                "transition-all duration-300 hover:scale-105",
+                scrolled 
+                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  : "text-gray-600 hover:text-wedding-mauve"
+              )}
+            >
+              RSVP
+            </a>
+            <a 
+              href="#gallery" 
+              className={cn(
+                "transition-all duration-300 hover:scale-105",
+                scrolled 
+                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  : "text-gray-600 hover:text-wedding-mauve"
+              )}
+            >
+              Gallery
+            </a>
           </nav>
         </div>
 
         {/* Mobile menu */}
-        <nav className={`md:hidden absolute left-0 right-0 top-full bg-white/95 shadow-md backdrop-blur-md transition-all duration-300 ease-in-out ${menuOpen ? 'max-h-80 p-4' : 'max-h-0 overflow-hidden'}`}>
+        <nav className={cn(
+          "md:hidden absolute left-0 right-0 top-full transition-all duration-300 ease-in-out",
+          scrolled 
+            ? "bg-white/20 backdrop-blur-xl border-b border-white/20" 
+            : "bg-white/95 backdrop-blur-md",
+          "shadow-lg",
+          menuOpen ? 'max-h-80 p-4' : 'max-h-0 overflow-hidden'
+        )}>
           <div className="flex flex-col space-y-4 p-2">
-            <a href="#home" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">Home</a>
-            <a href="#our-story" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">Our Story</a>
-            <a href="#details" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">Details</a>
-            <a href="#rsvp" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">RSVP</a>
-            <a href="#gallery" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-wedding-mauve transition-colors duration-300">Gallery</a>
+            <a 
+              href="#home" 
+              onClick={() => setMenuOpen(false)} 
+              className={cn(
+                "transition-all duration-300",
+                scrolled 
+                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  : "text-gray-600 hover:text-wedding-mauve"
+              )}
+            >
+              Home
+            </a>
+            <a 
+              href="#our-story" 
+              onClick={() => setMenuOpen(false)} 
+              className={cn(
+                "transition-all duration-300",
+                scrolled 
+                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  : "text-gray-600 hover:text-wedding-mauve"
+              )}
+            >
+              Our Story
+            </a>
+            <a 
+              href="#details" 
+              onClick={() => setMenuOpen(false)} 
+              className={cn(
+                "transition-all duration-300",
+                scrolled 
+                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  : "text-gray-600 hover:text-wedding-mauve"
+              )}
+            >
+              Details
+            </a>
+            <a 
+              href="#rsvp" 
+              onClick={() => setMenuOpen(false)} 
+              className={cn(
+                "transition-all duration-300",
+                scrolled 
+                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  : "text-gray-600 hover:text-wedding-mauve"
+              )}
+            >
+              RSVP
+            </a>
+            <a 
+              href="#gallery" 
+              onClick={() => setMenuOpen(false)} 
+              className={cn(
+                "transition-all duration-300",
+                scrolled 
+                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  : "text-gray-600 hover:text-wedding-mauve"
+              )}
+            >
+              Gallery
+            </a>
           </div>
         </nav>
       </div>
