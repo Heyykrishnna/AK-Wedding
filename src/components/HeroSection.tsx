@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import Countdown from './Countdown';
 import AudioPlayer from './AudioPlayer';
@@ -16,12 +15,15 @@ const HeroSection: React.FC = () => {
 
   return (
     <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-br from-red-900 via-pink-800 to-orange-900">
-      {/* Rich Indian pattern overlay */}
-      <div className="absolute inset-0 bg-indian-pattern opacity-20 pointer-events-none" />
+      {/* Enhanced Indian pattern overlay - more visible */}
+      <div className="absolute inset-0 bg-indian-pattern opacity-40 pointer-events-none" />
       
-      {/* Gradient overlay with rich colors */}
+      {/* Additional pattern layer for depth */}
+      <div className="absolute inset-0 bg-floral opacity-25 pointer-events-none" />
+      
+      {/* Gradient overlay with rich colors - adjusted for pattern visibility */}
       <div 
-        className="absolute inset-0 bg-gradient-to-b from-red-900/90 via-pink-800/70 to-orange-800/80 pointer-events-none transition-all duration-300"
+        className="absolute inset-0 bg-gradient-to-b from-red-900/70 via-pink-800/50 to-orange-800/60 pointer-events-none transition-all duration-300"
         style={{
           transform: `translateY(${scrollY * 0.2}px)`,
           opacity: 1 - scrollY / 1200,
