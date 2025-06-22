@@ -59,8 +59,6 @@ src/
 └── main.tsx          # Entry point
 ```
 
----
-
 ## 📸 Screenshots
 
 > *(Optional: Add screenshots or animated previews here to showcase the website.)*
