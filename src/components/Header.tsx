@@ -55,7 +55,7 @@ const Header: React.FC = () => {
               "md:hidden focus:outline-none transition-all duration-300",
               scrolled 
                 ? "text-black drop-shadow-lg" 
-                : "text-wedding-mauve"
+                : "text-yellow-200"
             )}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +71,7 @@ const Header: React.FC = () => {
                 "transition-all duration-300 hover:scale-105",
                 scrolled 
                   ? "text-black/90 hover:text-black drop-shadow-md" 
-                  : "text-gray-600 hover:text-wedding-mauve"
+                  : "text-yellow-200 hover:text-yellow-100"
               )}
             >
               Home
@@ -82,7 +82,7 @@ const Header: React.FC = () => {
                 "transition-all duration-300 hover:scale-105",
                 scrolled 
                   ? "text-black/90 hover:text-black drop-shadow-md" 
-                  : "text-gray-600 hover:text-wedding-mauve"
+                  : "text-yellow-200 hover:text-yellow-100"
               )}
             >
               Our Story
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
                 "transition-all duration-300 hover:scale-105",
                 scrolled 
                   ? "text-black/90 hover:text-black drop-shadow-md" 
-                  : "text-gray-600 hover:text-wedding-mauve"
+                  : "text-yellow-200 hover:text-yellow-100"
               )}
             >
               Details
@@ -104,7 +104,7 @@ const Header: React.FC = () => {
                 "transition-all duration-300 hover:scale-105",
                 scrolled 
                   ? "text-black/90 hover:text-black drop-shadow-md" 
-                  : "text-gray-600 hover:text-wedding-mauve"
+                  : "text-yellow-200 hover:text-yellow-100"
               )}
             >
               RSVP
@@ -115,7 +115,7 @@ const Header: React.FC = () => {
                 "transition-all duration-300 hover:scale-105",
                 scrolled 
                   ? "text-black/90 hover:text-black drop-shadow-md" 
-                  : "text-gray-600 hover:text-wedding-mauve"
+                  : "text-yellow-200 hover:text-yellow-100"
               )}
             >
               Gallery
@@ -140,7 +140,7 @@ const Header: React.FC = () => {
                 "transition-all duration-300",
                 scrolled 
                   ? "text-black/90 hover:text-black drop-shadow-md" 
-                  : "text-gray-600 hover:text-wedding-mauve"
+                  : "text-gray-800 hover:text-wedding-mauve"
               )}
             >
               Home
@@ -152,7 +152,7 @@ const Header: React.FC = () => {
                 "transition-all duration-300",
                 scrolled 
                   ? "text-black/90 hover:text-black drop-shadow-md" 
-                  : "text-gray-600 hover:text-wedding-mauve"
+                  : "text-gray-800 hover:text-wedding-mauve"
               )}
             >
               Our Story
@@ -164,7 +164,7 @@ const Header: React.FC = () => {
                 "transition-all duration-300",
                 scrolled 
                   ? "text-black/90 hover:text-black drop-shadow-md" 
-                  : "text-gray-600 hover:text-wedding-mauve"
+                  : "text-gray-800 hover:text-wedding-mauve"
               )}
             >
               Details
@@ -176,7 +176,7 @@ const Header: React.FC = () => {
                 "transition-all duration-300",
                 scrolled 
                   ? "text-black/90 hover:text-black drop-shadow-md" 
-                  : "text-gray-600 hover:text-wedding-mauve"
+                  : "text-gray-800 hover:text-wedding-mauve"
               )}
             >
               RSVP
@@ -188,7 +188,7 @@ const Header: React.FC = () => {
                 "transition-all duration-300",
                 scrolled 
                   ? "text-black/90 hover:text-black drop-shadow-md" 
-                  : "text-gray-600 hover:text-wedding-mauve"
+                  : "text-gray-800 hover:text-wedding-mauve"
               )}
             >
               Gallery
