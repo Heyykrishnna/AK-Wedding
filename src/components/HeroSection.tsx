@@ -16,11 +16,11 @@ const HeroSection: React.FC = () => {
 
   return (
     <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-br from-red-900 via-pink-800 to-orange-900">
-      {/* Enhanced Indian pattern overlay - more visible */}
-      <div className="absolute inset-0 bg-indian-pattern opacity-50 pointer-events-none" />
+      {/* Reduced visibility of Indian pattern overlay */}
+      <div className="absolute inset-0 bg-indian-pattern opacity-20 pointer-events-none" />
       
-      {/* Additional pattern layer for depth */}
-      <div className="absolute inset-0 bg-floral opacity-35 pointer-events-none" />
+      {/* Reduced additional pattern layer for depth */}
+      <div className="absolute inset-0 bg-floral opacity-15 pointer-events-none" />
       
       {/* Gradient overlay with rich colors - adjusted for pattern visibility */}
       <div 

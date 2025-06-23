@@ -41,7 +41,7 @@ const Header: React.FC = () => {
             className={cn(
               "text-2xl font-cormorant font-semibold transition-all duration-300",
               scrolled 
-                ? "text-white drop-shadow-lg" 
+                ? "text-black drop-shadow-lg" 
                 : "text-wedding-mauve"
             )}
           >
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
             className={cn(
               "md:hidden focus:outline-none transition-all duration-300",
               scrolled 
-                ? "text-white drop-shadow-lg" 
+                ? "text-black drop-shadow-lg" 
                 : "text-wedding-mauve"
             )}
           >
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
               className={cn(
                 "transition-all duration-300 hover:scale-105",
                 scrolled 
-                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  ? "text-black/90 hover:text-black drop-shadow-md" 
                   : "text-gray-600 hover:text-wedding-mauve"
               )}
             >
@@ -81,7 +81,7 @@ const Header: React.FC = () => {
               className={cn(
                 "transition-all duration-300 hover:scale-105",
                 scrolled 
-                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  ? "text-black/90 hover:text-black drop-shadow-md" 
                   : "text-gray-600 hover:text-wedding-mauve"
               )}
             >
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
               className={cn(
                 "transition-all duration-300 hover:scale-105",
                 scrolled 
-                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  ? "text-black/90 hover:text-black drop-shadow-md" 
                   : "text-gray-600 hover:text-wedding-mauve"
               )}
             >
@@ -103,7 +103,7 @@ const Header: React.FC = () => {
               className={cn(
                 "transition-all duration-300 hover:scale-105",
                 scrolled 
-                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  ? "text-black/90 hover:text-black drop-shadow-md" 
                   : "text-gray-600 hover:text-wedding-mauve"
               )}
             >
@@ -114,7 +114,7 @@ const Header: React.FC = () => {
               className={cn(
                 "transition-all duration-300 hover:scale-105",
                 scrolled 
-                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  ? "text-black/90 hover:text-black drop-shadow-md" 
                   : "text-gray-600 hover:text-wedding-mauve"
               )}
             >
@@ -139,7 +139,7 @@ const Header: React.FC = () => {
               className={cn(
                 "transition-all duration-300",
                 scrolled 
-                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  ? "text-black/90 hover:text-black drop-shadow-md" 
                   : "text-gray-600 hover:text-wedding-mauve"
               )}
             >
@@ -151,7 +151,7 @@ const Header: React.FC = () => {
               className={cn(
                 "transition-all duration-300",
                 scrolled 
-                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  ? "text-black/90 hover:text-black drop-shadow-md" 
                   : "text-gray-600 hover:text-wedding-mauve"
               )}
             >
@@ -163,7 +163,7 @@ const Header: React.FC = () => {
               className={cn(
                 "transition-all duration-300",
                 scrolled 
-                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  ? "text-black/90 hover:text-black drop-shadow-md" 
                   : "text-gray-600 hover:text-wedding-mauve"
               )}
             >
@@ -175,7 +175,7 @@ const Header: React.FC = () => {
               className={cn(
                 "transition-all duration-300",
                 scrolled 
-                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  ? "text-black/90 hover:text-black drop-shadow-md" 
                   : "text-gray-600 hover:text-wedding-mauve"
               )}
             >
@@ -187,7 +187,7 @@ const Header: React.FC = () => {
               className={cn(
                 "transition-all duration-300",
                 scrolled 
-                  ? "text-white/90 hover:text-white drop-shadow-md" 
+                  ? "text-black/90 hover:text-black drop-shadow-md" 
                   : "text-gray-600 hover:text-wedding-mauve"
               )}
             >
