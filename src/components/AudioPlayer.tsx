@@ -68,7 +68,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc, autoPlay = false })
   }, [autoPlay]);
 
   return (
-    <div className="fixed bottom-8 right-8 z-50 bg-black/50 backdrop-blur-sm rounded-full p-3 shadow-lg border border-wedding-gold/30">
+    <div className="fixed bottom-8 right-8 z-50 group">
       <audio 
         ref={audioRef} 
         src={audioSrc} 
@@ -77,31 +77,87 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc, autoPlay = false })
         onError={handleError}
       />
       
-      <div className="flex items-center gap-3">
-        <button 
-          onClick={togglePlay}
-          className="w-10 h-10 rounded-full flex items-center justify-center bg-wedding-mauve hover:bg-wedding-mauve/80 transition-colors"
-          aria-label={isPlaying ? 'Pause music' : 'Play music'}
-        >
-          {isPlaying ? 
-            <Pause className="text-white" size={20} /> : 
-            <Play className="text-white" size={20} />
-          }
-        </button>
+      {/* Main container with enhanced blur and glass effect */}
+      <div className="relative bg-gradient-to-br from-yellow-400/20 via-orange-400/15 to-red-400/20 backdrop-blur-xl rounded-3xl p-4 shadow-2xl border border-yellow-400/30 hover:border-yellow-400/50 transition-all duration-300 hover:shadow-yellow-400/20 hover:shadow-lg">
+        {/* Inner glow effect */}
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-orange-400/10 rounded-3xl blur-sm"></div>
         
-        <button
-          onClick={toggleMute}
-          className="w-8 h-8 rounded-full flex items-center justify-center bg-gray-700 hover:bg-gray-600 transition-colors"
-          aria-label={isMuted ? 'Unmute music' : 'Mute music'}
-        >
-          {isMuted ? 
-            <VolumeX className="text-white" size={16} /> : 
-            <Volume2 className="text-white" size={16} />
-          }
-        </button>
+        {/* Content */}
+        <div className="relative flex items-center gap-4">
+          {/* Play/Pause button with enhanced styling */}
+          <button 
+            onClick={togglePlay}
+            className="relative w-14 h-14 rounded-full flex items-center justify-center bg-gradient-to-br from-yellow-400/80 via-orange-400/70 to-red-400/60 hover:from-yellow-300/90 hover:via-orange-300/80 hover:to-red-300/70 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group-hover:animate-pulse"
+            aria-label={isPlaying ? 'Pause music' : 'Play music'}
+          >
+            {/* Button inner glow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-yellow-300/40 to-orange-300/40 rounded-full blur-md"></div>
+            
+            {/* Icon */}
+            <div className="relative z-10">
+              {isPlaying ? 
+                <Pause className="text-white drop-shadow-lg" size={22} /> : 
+                <Play className="text-white drop-shadow-lg ml-1" size={22} />
+              }
+            </div>
+          </button>
+          
+          {/* Mute button with refined styling */}
+          <button
+            onClick={toggleMute}
+            className="relative w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-gray-700/60 via-gray-600/70 to-gray-800/60 hover:from-gray-600/70 hover:via-gray-500/80 hover:to-gray-700/70 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 backdrop-blur-sm border border-white/20"
+            aria-label={isMuted ? 'Unmute music' : 'Mute music'}
+          >
+            {/* Mute button glow */}
+            <div className="absolute inset-0 bg-white/10 rounded-full blur-sm"></div>
+            
+            {/* Icon */}
+            <div className="relative z-10">
+              {isMuted ? 
+                <VolumeX className="text-white drop-shadow-md" size={16} /> : 
+                <Volume2 className="text-white drop-shadow-md" size={16} />
+              }
+            </div>
+          </button>
+
+          {/* Music indicator with animated bars */}
+          {isPlaying && (
+            <div className="flex items-center gap-1">
+              {[...Array(3)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-1 bg-gradient-to-t from-yellow-400 to-orange-400 rounded-full animate-pulse"
+                  style={{
+                    height: `${12 + (i % 2) * 4}px`,
+                    animationDelay: `${i * 0.2}s`,
+                    animationDuration: '1s'
+                  }}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Floating particles effect */}
+        <div className="absolute -inset-2 pointer-events-none">
+          {[...Array(6)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-yellow-400/60 rounded-full animate-float-slow"
+              style={{
+                top: `${20 + (i * 10)}%`,
+                left: `${15 + (i * 15)}%`,
+                animationDelay: `${i * 0.5}s`,
+                animationDuration: `${3 + i}s`
+              }}
+            />
+          ))}
+        </div>
       </div>
+
+      {/* Error message with enhanced styling */}
       {error && (
-        <div className="absolute -top-10 left-0 right-0 bg-red-500/80 text-white text-xs py-1 px-3 rounded text-center">
+        <div className="absolute -top-16 left-0 right-0 bg-red-500/90 backdrop-blur-sm text-white text-xs py-2 px-4 rounded-xl text-center shadow-lg border border-red-400/30">
           {error}
         </div>
       )}
