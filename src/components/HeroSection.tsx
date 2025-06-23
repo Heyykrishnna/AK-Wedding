@@ -17,10 +17,10 @@ const HeroSection: React.FC = () => {
   return (
     <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-br from-red-900 via-pink-800 to-orange-900">
       {/* Reduced visibility of Indian pattern overlay */}
-      <div className="absolute inset-0 bg-indian-pattern opacity-20 pointer-events-none" />
+      <div className="absolute inset-0 bg-indian-pattern opacity-10 pointer-events-none" />
       
       {/* Reduced additional pattern layer for depth */}
-      <div className="absolute inset-0 bg-floral opacity-15 pointer-events-none" />
+      <div className="absolute inset-0 bg-floral opacity-8 pointer-events-none" />
       
       {/* Gradient overlay with rich colors - adjusted for pattern visibility */}
       <div 
@@ -159,13 +159,13 @@ const HeroSection: React.FC = () => {
             </h2>
           </div>
           
-          {/* Names with stunning gradient and glow effects - MADE BOLD */}
+          {/* Names with stunning gradient and glow effects - INCREASED SIZE AND MADE EXTRA BOLD */}
           <div className="relative mb-8">
-            <h1 className="font-cormorant text-5xl md:text-7xl lg:text-9xl font-bold mb-6 relative">
+            <h1 className="font-cormorant text-6xl md:text-8xl lg:text-[12rem] font-black mb-6 relative">
               <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent font-black drop-shadow-2xl">
                 Akansha
               </span>
-              <span className="mx-4 font-cormorant italic text-yellow-400 text-6xl md:text-8xl drop-shadow-xl font-bold">
+              <span className="mx-4 font-cormorant italic text-yellow-400 text-7xl md:text-9xl lg:text-[13rem] drop-shadow-xl font-black">
                 &
               </span>
               <span className="bg-gradient-to-r from-red-400 via-pink-400 to-orange-400 bg-clip-text text-transparent font-black drop-shadow-2xl">
